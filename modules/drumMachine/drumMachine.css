@@ -1,0 +1,22 @@
+div.drumMachineContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+    div.drumMachineContainer > div.leftControls {
+        text-align: center;
+        width: 88px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px;
+    }
+        div.drumMachineContainer > div.leftControls > div.buttonSelector {
+            width: 30px;
+        }
+        div.drumMachineContainer > div.leftControls > div.actionIcons {
+            width: 30px;
+        }
+    div.drumMachineContainer > div.gridContainer {
+        height: calc(100% - 11px) !important;
+    }
+

@@ -1,0 +1,79 @@
+div.gridContainer {
+    padding: 5px 10px 5px 5px;
+    overflow-y: scroll;
+    height: 100%;
+    display: inline-block;
+}
+
+    div.gridContainer > div.rowContainer > div.row {
+        margin-bottom: -3px;
+    }
+    div.gridContainer > div.rowContainer > div.row > div.gridSelect {
+        position: relative;
+        top: 3px;
+    }
+    div.gridContainer > div.rowContainer > div.row > div.actionIcons > span > i{
+        height: 20px;
+        margin: 4px 0 0 0;
+    }
+    div.gridContainer > div.rowContainer > div.row > div.rowTitle {
+        display: inline-block;
+        width: 75px;
+        vertical-align: top;
+        font-size: 18px;
+        text-align: right;
+        margin-right: 5px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 24px;
+        overflow: hidden;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    div.gridContainer > div.rowContainer > div.row > div.stopContainer {
+        display: inline-block;
+        font-size: 14px;
+        width: 21px;
+        vertical-align: top;
+        text-align: center;
+        margin: 1px 4px 0 0;
+        cursor: pointer;
+    }
+    div.gridContainer > div.rowContainer > div.row > div.cell {
+        display: inline-block;
+        border: 1px solid;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 24px;
+        height: 22px;
+        margin-left: -1px;
+        margin-bottom: -1px;
+        cursor: pointer;
+        padding: 2px;
+        vertical-align: top;
+        text-align: center;
+    }
+        div.gridContainer > div.rowContainer > div.row > div.cell > div.innerCell {
+            width: 100%;
+            height: 100%;
+            text-shadow: none;
+        }
+
+
+
+
+
+div.gridContainer > div.rowContainer > div.row > div.rowControls {
+    border: 1px solid;
+    margin: -3px 0 20px 0;
+    padding: 5px;
+}
+div.gridContainer > div.rowContainer > div.row > div.rowControls > div.sampleModifier {
+    display: inherit;
+    text-align: center;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

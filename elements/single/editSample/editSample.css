@@ -1,0 +1,8 @@
+div.editSampleContainer {
+    width: 100%;
+    height: 100%;
+}
+div.editSampleContainer > canvas.sampleEditCanvas {
+    width: 100%;
+    height: 100%;
+}

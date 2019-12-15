@@ -1,0 +1,74 @@
+div.touchPadContainer {
+	height:100%;
+}
+
+    div.touchPadContainer > div.touchScreen {
+        border: 2px solid;
+        border-radius: 11px;
+        height: calc(100% - 86px);
+        width: calc(100% - 4px);
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+        div.touchPadContainer > div.touchScreen > canvas.touchPadCanvas {
+            cursor: crosshair;
+            -webkit-border-radius: 8px;
+        }
+
+    div.touchPadContainer > div.controlScreen {
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 17px;
+        display: inline-block;
+        width: calc(100% - 3px);
+        text-align: center;
+    }
+
+        div.touchPadContainer > div.controlScreen > div.XYControlContainer {
+            display: inline-block;
+            margin: 5px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+            div.touchPadContainer > div.controlScreen > div.XYControlContainer.left {
+                width: 150px;
+                float: left;
+            }
+            div.touchPadContainer > div.controlScreen > div.XYControlContainer.right {
+                width: 150px;
+                float: right;
+            }
+            div.touchPadContainer > div.controlScreen > div.XYControlContainer.center {
+                width: 150px;
+            }
+                div.touchPadContainer > div.controlScreen > div.XYControlContainer > div.sliderHorizontal  {
+                    margin: 10px 0;
+                }
+
+        div.touchPadContainer > div.controlScreen > div.XYControlContainer > div.numberModifier {
+            width: 73px;
+            text-align: right;
+        }
+
+
+
+input.freqRange::-webkit-outer-spin-button,
+
+input.freqRange::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input.freqRange {
+    width: 45px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+input.horizScroll {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+}

@@ -1,0 +1,24 @@
+<div class="alertDialogCover" data-ng-style="{display: displayValue}">
+
+    <div class="alertDialogContainer">
+        <div class="headerRow">
+            <span class="title">{{title}}</span>
+            <i class="fa fa-times" data-ng-if="closeable" data-ng-click="closeDialog()"></i>
+        </div>
+
+
+        <div class="mainContainer">
+            {{message}}
+
+
+        </div>
+        <div class="buttonContainer">
+            <div class="button"
+                 data-ng-repeat="button in buttons"
+                 data-ng-click="button.toRun()">
+                {{button.label}}
+            </div>
+        </div>
+    </div>
+
+</div>

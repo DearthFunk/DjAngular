@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;}
+
+body {
+    font-family: "calibri";
+    font-size: 12px;
+    background-size: 100% 100%;
+    -webkit-transition: background 300ms ease-in 50ms; /* property duration timing-function delay */
+    -moz-transition: background 300ms ease-in 50ms;
+    -o-transition: background 300ms ease-in 50ms;
+    transition: background 300ms ease-in 50ms;}
+
+* {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;}
+
+*:focus {
+    outline: 0;}
+
+.clear{
+    clear: both;}
+
+.popover {
+   color:#000000;
+   font-size: 12px;}
+
+.popover-content {
+    text-shadow: none;}
+
+#cursorMask {
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    cursor: crosshair;
+    left: 0;
+    top: 0;
+    position: absolute;}
+
+canvas.bckgrndVisualizer {
+	display: block;
+    position: absolute;
+    z-index: 0;}
+
+.canvasWithRoundedCorners {
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.verticalScrollBar::-webkit-scrollbar        {width: 12px; height:12px; }
+.verticalScrollBar::-webkit-scrollbar-track  {-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);}
+.verticalScrollBar::-webkit-scrollbar-thumb  {border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.7);}
+.verticalScrollBar::-webkit-scrollbar-corner {background-color: rgba(0,0,0,0);}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: #bbbbbb;
+    height: 7px;
+    cursor: pointer;
+    width: 121px;
+    display: inline;
+    position: relative;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #444;
+    width: 10px;
+    height: 15px;}

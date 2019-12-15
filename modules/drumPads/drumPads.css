@@ -1,0 +1,47 @@
+div.drumPadsContainer {
+
+}
+    div.drumPadsContainer > div.left {
+        text-align: center;
+        width: 52px;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+    }
+            div.drumPadsContainer > div.left > div.buttonSelector {
+                width: 30px;
+            }
+
+
+    div.drumPadsContainer > div.right {
+        width: calc(100% - 56px);
+        display: inline-block;
+    }
+    div.drumPadsContainer > div.right > div.drumPad {
+        display: inline-block;
+        border: 2px solid;
+        width: 40px;
+        height: 40px;
+        border-radius: 7px;
+        margin: 1px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 7px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        cursor: pointer;
+    }
+    div.drumPadsContainer > div.right > div.drumPad.activePad {
+        text-shadow: none;
+    }
+
+    div.drumPadsContainer > div.padModificationContainer {
+
+    }
+        div.drumPadsContainer > div.padModificationContainer > div.title {
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }

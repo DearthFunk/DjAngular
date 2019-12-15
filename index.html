@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html data-ng-app="angularDJ" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>D'Jangular</title>
+
+    <!--LIBRARIES------------------------------------------------------------------------------------------------------>
+        <script type="text/javascript" src="js/lib/angularJS/angular.js"></script>
+        <script type="text/javascript" src="js/lib/angularJS/angular-animate.js"></script>
+        <script type="text/javascript" src="js/lib/angularJS/angular-sanitize.js"></script>
+        <script type="text/javascript" src="js/lib/angularJS/angular-ui.js"></script>
+        <script type="text/javascript" src="js/lib/JQuery/jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="js/lib/recorder/recorder.js"></script>
+        <script type="text/javascript" src="js/lib/recorder/recorderWorker.js"></script>
+        <script type="text/javascript" src="js/lib/MIDI/JazzMIDIBridge.js"></script>
+        <script type="text/javascript" src="js/lib/MIDI/MIDIDeviceSelector.js"></script>
+        <script type="text/javascript" src="js/lib/tuna/tuna.js"></script>
+
+        <link rel="stylesheet" href="font/css/font-awesome.min.css">
+        <link rel="stylesheet" href="js/lib/bootstrap/bootstrap.css">
+    <!--Main----------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/angularDJ.js"></script>
+        <link rel="stylesheet" href="css/angularDJ.css">
+
+    <!--DATA FILES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/data/functions-color.js"></script>
+        <script type="text/javascript" src="js/data/functions-draw.js"></script>
+        <script type="text/javascript" src="js/data/functions-general.js"></script>
+        <script type="text/javascript" src="js/data/keyCodes.js"></script>
+        <script type="text/javascript" src="js/data/samples.js"></script>
+        <script type="text/javascript" src="js/data/kits.js"></script>
+        <script type="text/javascript" src="js/data/variables.js"></script>
+        <script type="text/javascript" src="js/data/themes.js"></script>
+        <script type="text/javascript" src="js/data/visualizations.js"></script>
+
+        <script type="text/javascript" src="js/data/fxDefaults.js"></script>
+        <script type="text/javascript" src="js/data/synthTemplates.js"></script>
+
+    <!--MIDI Objects--------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/midiInterface/launchpad.js"></script>
+        <script type="text/javascript" src="js/midiInterface/midiFighterPro.js"></script>
+
+    <!-----CLASSES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/classes/keyboardClass.js"></script>
+        <script type="text/javascript" src="js/classes/synthClass.js"></script>
+
+    <!--FILTERS-------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/filters/orderObjectBy.js"></script>
+
+    <!--GENERAL DIRECTIVES------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/directives/blurAndFocus.js"></script>
+
+    <!--SERVICES------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/services/audio/audio.js"></script>
+            <script type="text/javascript" src="js/services/audio/audioChannels.js"></script>
+
+        <script type="text/javascript" src="js/services/visualizations/visualization.js"></script>
+            <script type="text/javascript" src="js/services/visualizations/visualizationResize.js"></script>
+            <script type="text/javascript" src="js/services/visualizations/visualizationTheme.js"></script>
+
+        <script type="text/javascript" src="js/services/ui/ui.js"></script>
+            <script type="text/javascript" src="js/services/ui/uiEvent.js"></script>
+            <script type="text/javascript" src="js/services/ui/uiTheme.js"></script>
+            <script type="text/javascript" src="js/services/ui/uiToolTips.js"></script>
+
+        <script type="text/javascript" src="js/services/midi/midi.js"></script>
+
+
+
+	<!------SINGLE ELEMENTS-------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="elements/single/singleElements.js"></script>
+        <script type="text/javascript" src="elements/single/knob/knob.js"></script>
+        <script type="text/javascript" src="elements/single/stereoMeter/stereoMeter.js"></script>
+        <script type="text/javascript" src="elements/single/sliderVerticalLarge/sliderVerticalLarge.js"></script>
+        <script type="text/javascript" src="elements/single/masterRecorder/masterRecorder.js"></script>
+        <script type="text/javascript" src="elements/single/radioButton/radioButton.js"></script>
+        <script type="text/javascript" src="elements/single/numberModifierArray/numberModifierArray.js"></script>
+        <script type="text/javascript" src="elements/single/numberModifier/numberModifier.js"></script>
+        <script type="text/javascript" src="elements/single/buttonSelector/buttonSelector.js"></script>
+        <script type="text/javascript" src="elements/single/actionIcons/actionIcons.js"></script>
+        <script type="text/javascript" src="elements/single/gridSelect/gridSelect.js"></script>
+        <script type="text/javascript" src="elements/single/grid/grid.js"></script>
+        <script type="text/javascript" src="elements/single/groupActivators/groupActivators.js"></script>
+        <script type="text/javascript" src="elements/single/dropDown/dropDown.js"></script>
+        <script type="text/javascript" src="elements/single/sliderHorizontal/sliderHorizontal.js"></script>
+        <script type="text/javascript" src="elements/single/sliderVertical/sliderVertical.js"></script>
+        <script type="text/javascript" src="elements/single/editSample/editSample.js"></script>
+        <script type="text/javascript" src="elements/single/tempoTracker/tempoTracker.js"></script>
+        <link rel="stylesheet" href="elements/single/stereoMeter/stereoMeter.css">
+        <link rel="stylesheet" href="elements/single/sliderVerticalLarge/sliderVerticalLarge.css">
+        <link rel="stylesheet" href="elements/single/knob/knob.css">
+        <link rel="stylesheet" href="elements/single/masterRecorder/masterRecorder.css">
+        <link rel="stylesheet" href="elements/single/radioButton/radioButton.css">
+        <link rel="stylesheet" href="elements/single/numberModifierArray/numberModifierArray.css">
+        <link rel="stylesheet" href="elements/single/numberModifier/numberModifier.css">
+        <link rel="stylesheet" href="elements/single/buttonSelector/buttonSelector.css">
+        <link rel="stylesheet" href="elements/single/actionIcons/actionIcons.css">
+        <link rel="stylesheet" href="elements/single/grid/grid.css">
+        <link rel="stylesheet" href="elements/single/gridSelect/gridSelect.css">
+        <link rel="stylesheet" href="elements/single/groupActivators/groupActivators.css">
+        <link rel="stylesheet" href="elements/single/dropDown/dropDown.css">
+        <link rel="stylesheet" href="elements/single/sliderHorizontal/sliderHorizontal.css">
+        <link rel="stylesheet" href="elements/single/sliderVertical/sliderVertical.css">
+        <link rel="stylesheet" href="elements/single/editSample/editSample.css">
+        <link rel="stylesheet" href="elements/single/tempoTracker/tempoTracker.css">
+
+
+    <!------GROUP ELEMENTS--------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="elements/group/groupElements.js"></script>
+        <script type="text/javascript" src="elements/group/fxEditorColumn/fxEditorColumn.js"></script>
+        <script type="text/javascript" src="elements/group/mixerChannel/mixerChannel.js"></script>
+        <script type="text/javascript" src="elements/group/synthControls/synthControls.js"></script>
+        <script type="text/javascript" src="elements/group/volumePan/volumePan.js"></script>
+        <script type="text/javascript" src="elements/group/muteSolo/muteSolo.js"></script>
+        <script type="text/javascript" src="elements/group/fxSelect/fxSelect.js"></script>
+		<script type="text/javascript" src="elements/group/masterCompressor/masterCompressor.js"></script>
+        <script type="text/javascript" src="elements/group/midiSelect/midiSelect.js"></script>
+        <script type="text/javascript" src="elements/group/radioButtons/radioButtons.js"></script>
+        <script type="text/javascript" src="elements/group/sampleModifier/sampleModifier.js"></script>
+        <link rel="stylesheet" href="elements/group/synthControls/synthControls.css">
+	    <link rel="stylesheet" href="elements/group/mixerChannel/mixerChannel.css">
+        <link rel="stylesheet" href="elements/group/volumePan/volumePan.css">
+        <link rel="stylesheet" href="elements/group/muteSolo/muteSolo.css">
+        <link rel="stylesheet" href="elements/group/fxSelect/fxSelect.css">
+		<link rel="stylesheet" href="elements/group/masterCompressor/masterCompressor.css">
+        <link rel="stylesheet" href="elements/group/midiSelect/midiSelect.css">
+        <link rel="stylesheet" href="elements/group/radioButtons/radioButtons.css">
+        <link rel="stylesheet" href="elements/group/sampleModifier/sampleModifier.css">
+        <link rel="stylesheet" href="elements/group/fxEditorColumn/fxEditorColumn.css">
+
+    <!-----GROUP-FX ELEMENTS----------------------------------------------------------------------------------->
+    <script type="text/javascript" src="elements/groupFX/groupFXElements.js"></script>
+        <script type="text/javascript" src="elements/groupFX/cabinet/cabinet.js"></script>
+        <script type="text/javascript" src="elements/groupFX/chorus/chorus.js"></script>
+        <script type="text/javascript" src="elements/groupFX/compressor/compressor.js"></script>
+        <script type="text/javascript" src="elements/groupFX/convolver/convolver.js"></script>
+        <script type="text/javascript" src="elements/groupFX/delay/delay.js"></script>
+        <script type="text/javascript" src="elements/groupFX/filter/filter.js"></script>
+        <script type="text/javascript" src="elements/groupFX/overdrive/overdrive.js"></script>
+        <script type="text/javascript" src="elements/groupFX/phaser/phaser.js"></script>
+        <script type="text/javascript" src="elements/groupFX/tremolo/tremolo.js"></script>
+        <script type="text/javascript" src="elements/groupFX/wahwah/wahwah.js"></script>
+        <link rel="stylesheet" href="elements/groupFX/cabinet/cabinet.css">
+        <link rel="stylesheet" href="elements/groupFX/chorus/chorus.css">
+        <link rel="stylesheet" href="elements/groupFX/compressor/compressor.css">
+        <link rel="stylesheet" href="elements/groupFX/convolver/convolver.css">
+        <link rel="stylesheet" href="elements/groupFX/delay/delay.css">
+        <link rel="stylesheet" href="elements/groupFX/filter/filter.css">
+        <link rel="stylesheet" href="elements/groupFX/overdrive/overdrive.css">
+        <link rel="stylesheet" href="elements/groupFX/phaser/phaser.css">
+        <link rel="stylesheet" href="elements/groupFX/tremolo/tremolo.css">
+        <link rel="stylesheet" href="elements/groupFX/wahwah/wahwah.css">
+
+
+	<!-----MODULES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="modules/alertDialog/alertDialog.js"></script>
+        <script type="text/javascript" src="modules/mixer/mixer.js"></script>
+        <script type="text/javascript" src="modules/keyboard/keyboard.js"></script>
+        <script type="text/javascript" src="modules/container/container.js"></script>
+        <script type="text/javascript" src="modules/drumPads/drumPads.js"></script>
+        <script type="text/javascript" src="modules/drumMachine/drumMachine.js"></script>
+        <script type="text/javascript" src="modules/synth/synth.js"></script>
+        <script type="text/javascript" src="modules/touchPad/touchPad.js"></script>
+        <script type="text/javascript" src="modules/loadingAnimation/loadingAnimation.js"></script>
+        <script type="text/javascript" src="modules/fxEditor/fxEditor.js"></script>
+        <script type="text/javascript" src="modules/autoGater/autoGater.js"></script>
+        <script type="text/javascript" src="modules/autoLooper/autoLooper.js"></script>
+        <script type="text/javascript" src="modules/lineIn/lineIn.js"></script>
+        <script type="text/javascript" src="modules/sampleManager/sampleManager.js"></script>
+        <script type="text/javascript" src="modules/toolTipActivator/toolTipActivator.js"></script>
+        <link rel="stylesheet" href="modules/alertDialog/alertDialog.css">
+        <link rel="stylesheet" href="modules/mixer/mixer.css">
+        <link rel="stylesheet" href="modules/keyboard/keyboard.css">
+        <link rel="stylesheet" href="modules/container/container.css">
+        <link rel="stylesheet" href="modules/drumPads/drumPads.css">
+        <link rel="stylesheet" href="modules/drumMachine/drumMachine.css">
+        <link rel="stylesheet" href="modules/synth/synth.css">
+        <link rel="stylesheet" href="modules/touchPad/touchPad.css">
+        <link rel="stylesheet" href="modules/loadingAnimation/loadingAnimation.css">
+        <link rel="stylesheet" href="modules/fxEditor/fxEditor.css">
+        <link rel="stylesheet" href="modules/autoGater/autoGater.css">
+        <link rel="stylesheet" href="modules/autoLooper/autoLooper.css">
+        <link rel="stylesheet" href="modules/lineIn/lineIn.css">
+        <link rel="stylesheet" href="modules/sampleManager/sampleManager.css">
+        <link rel="stylesheet" href="modules/toolTipActivator/toolTipActivator.css">
+
+    <!-----MENU-------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="modules/mainMenu/mainMenu.js"></script>
+        <link rel="stylesheet" href="modules/mainMenu/mainMenu.css">
+            <script type="text/javascript" src="modules/mainMenu/settingsTheme/settingsTheme.js"></script>
+            <script type="text/javascript" src="modules/mainMenu/settingsUI/settingsUI.js"></script>
+            <script type="text/javascript" src="modules/mainMenu/settingsMIDI/settingsMIDI.js"></script>
+            <script type="text/javascript" src="modules/mainMenu/settingsVisualizations/settingsVisualizations.js"></script>
+            <link rel="stylesheet" href="modules/mainMenu/settingsTheme/settingsTheme.css">
+            <link rel="stylesheet" href="modules/mainMenu/settingsUI/settingsUI.css">
+            <link rel="stylesheet" href="modules/mainMenu/settingsMIDI/settingsMIDI.css">
+            <link rel="stylesheet" href="modules/mainMenu/settingsVisualizations/settingsVisualizations.css">
+
+</head>
+
+<body data-ng-controller="angularDJController"
+      data-ng-style="{
+      backgroundImage: uiThemeService.backgrounds[uiThemeService.theme.styles.background].imgURL,
+      textShadow: '1px 1px' + uiThemeService.theme.styles.global.textShadowColor}">
+    <div class="toolTipActivator" data-ng-hide="uiService.userInterface.disableToolTipLink"></div>
+    <div class="loadingAnimation"></div>
+    <div class="alertDialog"></div>
+    <div class="mainMenu"></div>
+    <canvas id="bckgrndVisualizer" class="bckgrndVisualizer" data-ng-style="{display: visualizationProcessingService.visualizations[visualizationProcessingService.visualization].display}"></canvas>
+	
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-53807010-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

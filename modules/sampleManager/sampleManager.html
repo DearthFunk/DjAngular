@@ -1,0 +1,37 @@
+<div class="sampleManagerContainer" data-ng-style="themeService.theme.styles.sampleManager">
+
+    <input data-ng-change="handleFileSelect($event)" data-ng-model="files" class="fileButton" type="file" id="files" name="files[]" multiple />
+
+    <div class="headerSection" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor, color: themeService.theme.styles.menu.color}">
+        Sample Name
+        <div class="addSample" data-ng-click="importSample()">Upload New Samples</div>
+    </div>
+
+    <div class="left verticalScrollBar">
+        <div class="sample"
+             data-ng-if="sample.successfulDecode"
+             data-ng-repeat="sample in audioProcessingService.samples track by $index">
+            <div class="actionIcons" data-repeat-index="$index" data-entry="sample" data-font-size="12" data-icon-entries="sampleIcons"></div>
+            <input data-ng-keydown="keyPress($index,$event)" data-ng-show="sample.editingName" data-ng-focus="sample.editingName" onfocus="this.select()" onchange="" type="text" data-ng-model="sample.fileName" data-ng-style="{color: themeService.theme.styles.menu.color}">
+            <span data-ng-style="{color: themeService.theme.styles.menu.color}" data-ng-show="!sample.editingName">{{sample.fileName}}</span>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="rightHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <div class="fadeOutMessage" data-ng-style="{opacity: mainOpacity/10}" data-ng-show="fadeOutMessage">MAXIMUM OF {{maxKits}} KITS HIT, SORRY...</div>
+            <div class="actionIcons" data-font-size="30" data-icon-entries="kitModifiers"></div>
+            <div class="buttonSelector"
+                 data-send-placement="'top'" data-send-popover="uiToolTipService.values.changeKit"
+                 data-change-action="kitChangeAction" data-selected-item="selectedKit" data-total-items="audioProcessingService.kits.length"></div>
+        </div>
+        <div class="rightEditor verticalScrollBar">
+            <div class="row" data-ng-repeat="index in audioProcessingService.kits[selectedKit] track by $index" data-ng-style="{color: themeService.theme.styles.menu.color}">
+                <div class="actionIcons" data-repeat-index="index" data-entry="audioProcessingService.samples[index].kits[selectedKit]" data-font-size="20" data-icon-entries="kitSampleIcons"></div>
+                {{audioProcessingService.samples[index].fileName}}
+                <div class="editSample" data-ng-if="audioProcessingService.samples[index].editing" data-sample="audioProcessingService.samples[index]" data-sample-index="index" data-selected-kit="selectedKit"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

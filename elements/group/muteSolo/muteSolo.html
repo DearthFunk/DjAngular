@@ -1,0 +1,13 @@
+<div class="muteSoloControlsBox">
+    <div class="button mute"
+         data-ng-click="audioProcessingService.muteChannels(channelData)"
+         data-ng-style="channelData.muteValue ? themeService.theme.styles.mixerButtonActive : themeService.theme.styles.mixerButton">
+        M
+    </div>
+    <div class="button solo"
+         data-ng-click="audioProcessingService.soloChannels(channelData)"
+         data-ng-style="channelData.soloValue ? themeService.theme.styles.mixerButtonActive : themeService.theme.styles.mixerButton">
+        SOLO
+    </div>
+
+</div>

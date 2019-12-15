@@ -1,0 +1,42 @@
+<div class="touchPadContainer">
+	<div class="touchScreen" data-ng-style="themeService.theme.styles.touchPadBorder">
+		<canvas id="touchPadCanvas" class="touchPadCanvas canvasWithRoundedCorners" width="10px" height="10px" data-ng-mousedown="mouseDown($event)" >
+			<div style="clear:both"></div>
+		</canvas>
+	</div>
+
+	<div class="controlScreen">
+
+		<div class="left XYControlContainer">
+            <div class="dropDown"
+                 data-list="optionWaveTypes"
+                 data-key="'name'"
+                 data-selected="waveTypeX"
+                 data-width="150"
+                 data-height="20"></div>
+            <div class="numberModifier" data-label="'L'" data-speed="10" data-min-value="1"  data-max-value="22000"  data-num-value="minFreqX"></div>
+            <div class="numberModifier" data-label="'R'" data-speed="10" data-min-value="1"  data-max-value="22000"  data-num-value="maxFreqX"></div>
+		</div>
+
+
+        <div class="center XYControlContainer">
+            <div class="sliderHorizontal" data-slider-value="padCircleSize" data-width="150"></div>
+            <div class="sliderHorizontal" data-slider-value="numOfCircles" data-width="150"></div>
+        </div>
+
+
+		<div class="right XYControlContainer">
+            <div class="dropDown"
+                 data-list="optionWaveTypes"
+                 data-key="'name'"
+                 data-selected="waveTypeY"
+                 data-width="150"
+                 data-height="20"></div>
+            <div class="numberModifier" data-label="'B'" data-speed="10" data-min-value="1"  data-max-value="22000"  data-num-value="minFreqY"></div>
+            <div class="numberModifier" data-label="'T'" data-speed="10" data-min-value="1"  data-max-value="22000"  data-num-value="maxFreqY"></div>
+
+		</div>
+
+
+	</div>
+</div>

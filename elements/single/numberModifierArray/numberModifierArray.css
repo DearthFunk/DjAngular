@@ -1,0 +1,45 @@
+div.numberModifierArrayContainer {
+    display: inline-block;
+    width: 44px;
+}
+    div.numberModifierArrayContainer > div.label {
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    div.numberModifierArrayContainer > div.left{
+        display: inline-block;
+    }
+    div.numberModifierArrayContainer > div.left > div.arrowContainer:first-child{
+        margin-bottom: 1px;
+        overflow: hidden;
+    }
+    div.numberModifierArrayContainer > div.left > div.arrowContainer:first-child > i.fa{
+        top: -9px;
+    }
+
+        div.numberModifierArrayContainer > div.left > div.arrowContainer {
+            cursor: pointer;
+            font-size: 20px;
+            height: 12px;
+            line-height: 12px;
+            position: relative;
+            width: 21px;
+            text-align: center;
+            overflow: hidden;
+        }
+            div.numberModifierArrayContainer > div.left > div.arrowContainer > i.fa{
+                vertical-align: text-bottom;
+                height: 12px;
+                position: relative;
+                top: -12px;
+            }
+    div.numberModifierArrayContainer > div.right{
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+        font-size: 18px;
+        font-weight: bold;
+        width: 14px;
+        text-align: right;
+    }

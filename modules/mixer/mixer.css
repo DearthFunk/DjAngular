@@ -1,0 +1,40 @@
+div.mixerContainer {
+	display: inline-block;
+    min-width: 209px;
+}
+    div.mixerContainer > div.top {
+        display: inline-block;
+        width: 100%;
+
+        text-align: right;
+        border-top: 3px solid;
+        border-bottom: 3px solid;
+    }
+        div.mixerContainer > div.top > div.mixerChannelContainer{
+            display: inline-block;
+            padding: 10px;
+            border-left: 3px solid;
+        }
+            div.mixer > div.top >  div.mixerChannelContainer:first-child{
+                border-left: 0 none;
+            }
+
+
+    div.mixerContainer > div.bottom {
+	    margin-top: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+        div.mixerContainer > div.bottom > div.row {
+
+        }
+        div.mixerContainer > div.bottom > div.row > div.control {
+            width: 51px;
+        }
+        div.mixerContainer > div.bottom > div.row > div.radioButton {
+            vertical-align: top;
+        }
+        div.mixerContainer > div.bottom > div.row > div.sliderHorizontal {
+            display: inline-block;
+        }

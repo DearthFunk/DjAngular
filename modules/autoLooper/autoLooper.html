@@ -1,0 +1,22 @@
+<div class="autoLooperContainer">
+
+    <div class="leftControls">
+        <div class="buttonSelector"
+             data-send-placement="'top'" data-send-popover="uiToolTipService.values.changeKit"
+             data-change-action="kitChangeAction" data-selected-item="selectedKit" data-total-items="audioProcessingService.kits.length"></div>
+        <div class="groupActivators" data-change-action="groupChangeAction" data-groups="groups"></div>
+        <div class="actionIcons" data-icon-entries="iconEntries"></div>
+    </div>
+
+    <div class="grid"
+         data-type="'al'"
+         data-kit="selectedKit"
+         data-grid-select="true"
+         data-length="looperLength"
+         data-click-track="clickTrack"
+         data-mouse-events="mouseEvents"
+         data-action-icons="rowActionIcons"
+         data-font-size="16"
+         data-collapse="uiService.userInterface.autoLooperAutoHideControls"></div>
+
+</div>

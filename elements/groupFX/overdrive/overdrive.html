@@ -1,0 +1,19 @@
+<div class="overdriveContainer">
+    <div class="knobRow" data-ng-if="showBypass">
+        <div class="radioButton" data-check-value="values.bypass" data-size="10" data-width="75" data-label="'Bypass'"></div>
+    </div>
+    <div class="knobRow">
+        <div class="dropDown"
+             data-list="filterTypes"
+             data-key="'name'"
+             data-selected="values.algorithmIndex"
+             data-width="75"
+             data-height="20">
+        </div>
+    </div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Gain'"   data-knob-size="40" data-min-value="0" data-max-value="100" data-knob-value="values.outputGain"></div>
+        <div class="knob" data-label="'Drive'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="values.drive"></div>
+        <div class="knob" data-label="'Curve'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="values.curveAmount"></div>
+    </div>
+</div>

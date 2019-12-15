@@ -1,0 +1,6 @@
+<div class="fxEditorContainer" >
+    <div class="column" data-ng-repeat="channel in audioChannelsService.trackChannels track by $index" data-ng-if="channel.active" data-ng-style="themeService.theme.styles.fxEditorColumn">
+        <div class="columnTitleText" data-ng-style="themeService.theme.styles.fxEditorColumn">{{channel.channelName}}</div>
+        <div class="fxEditorColumn" data-channel="channel"></div>
+    </div>
+</div>

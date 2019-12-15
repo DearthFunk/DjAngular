@@ -1,0 +1,105 @@
+div.mainContainer {
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+        div.mainContainer > div.topRow {
+            text-align: right;
+            height: 20px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding-bottom: 21px;
+            padding-right: 5px;
+            border-bottom:2px solid;
+        }
+
+                div.mainContainer > div.topRow > div.topRightIcon {
+                    border: none;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    width: 18px;
+                    float: right;
+                    display: inline-block;
+                    margin-top: 2px;
+                    text-align: center;
+                    cursor: pointer;
+                    font-size: 15px;
+                    height: 18px;
+                }
+
+        div.mainContainer > div.contents {
+            padding: 10px;
+            overflow: hidden;
+            height: calc(100% - 23px);
+            width: 100%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            min-height: 100px;
+            min-width: 100px;
+
+        }
+
+        div.mainContainer > div.loading {
+            min-width: 100px;
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        div.mainContainer > div.loading > i {
+            font-size: 25px;
+        }
+
+        div.mainContainer > div.resizeDiv {
+            float: right;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 20px;
+            height: 20px;
+            cursor: nw-resize;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+                div.mainContainer > div.resizeDiv > div.resizeCover {
+                    display: inline-block;
+                    width: 35px;
+                    height: 30px;
+                    -webkit-transform: rotate(130deg);
+                    -moz-transform: rotate(130deg);
+                    position: relative;
+                    top: 7px;
+                    left: 5px;
+                }
+
+
+div.minimize {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 6px;
+    margin-right: 20px;
+}
+
+
+div.menuTitle {
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+div.menuFullScreen {
+    width: calc(100% - 52px);
+    height: 14px;
+    cursor: move;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    padding: 4px;
+    overflow: hidden;
+}
+

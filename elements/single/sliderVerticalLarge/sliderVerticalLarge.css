@@ -1,0 +1,28 @@
+div.sliderVerticalLargeContainer {
+    width: 20px;
+    display: inline-block;
+    cursor: pointer ;
+    margin-right: 3px;
+    height: 100%;
+}
+div.sliderVerticalLargeContainer > div.verticalBar {
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    margin-left: 7px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+div.sliderVerticalLargeContainer > div.verticalBar > div.sliderThumbContainer {
+    cursor: pointer;
+    width: 10px;
+    margin-left: -4px;
+    position: relative;
+}
+div.sliderVerticalLargeContainer > div.verticalBar > div.sliderThumbContainer > div.sliderThumb {
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}

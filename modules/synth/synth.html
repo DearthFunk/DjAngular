@@ -1,0 +1,23 @@
+<div class="synthContainer">
+
+    <div class="top">
+        <div class="leftControls">
+            <div class="sliderVertical" data-height="100" data-slider-value="gridSize.w"></div>
+            <div class="sliderVertical" data-height="100" data-slider-value="gridSize.h"></div>
+            <div class="actionIcons" data-icon-entries="iconEntries"></div>
+        </div>
+
+        <div class="canvasContainer">
+            <canvas class="synthCanvas" oncontextmenu="return false;" data-ng-mousedown="mySynth.mouseDown($event)" ><div style="clear:both"></div></canvas>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="synthControls" data-ng-show="clipsSynth" data-selected-synth="selectedSynth" data-synth-templates="synthTemplates"></div>
+        <div class="buttonSelector"
+             data-ng-hide="clipsSynth"
+             data-send-placement="'top'" data-send-popover="uiToolTipService.values.loadSynthData"
+             data-selected-item="activeGrid" data-total-items="synthData.length" data-change-action="synthChangeAction"></div>
+    </div>
+
+</div>

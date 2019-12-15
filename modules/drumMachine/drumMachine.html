@@ -1,0 +1,19 @@
+<div class="drumMachineContainer"  data-ng-keydown="changeBeatsPerBar($event)">
+    <div class="leftControls">
+        <div class="buttonSelector"
+             data-send-placement="'top'" data-send-popover="uiToolTipService.values.changeKit"
+             data-change-action="kitChangeAction" data-selected-item="selectedKit" data-total-items="audioProcessingService.kits.length"></div>
+        <div class="actionIcons" data-icon-entries="iconEntries"></div>
+    </div>
+
+    <div class="grid"
+         data-length="drumMachineLength"
+         data-type="'dm'"
+         data-kit="selectedKit"
+         data-click-track="clickTrack"
+         data-mouse-events="mouseEvents"
+         data-start-stop="false"
+         data-grid-select="false"
+         data-collapse="uiService.userInterface.drumMachineAutoHideControls"></div>
+
+</div>

@@ -1,0 +1,44 @@
+div.mixerChannel {
+    width: 68px;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 7px;
+    margin: 0 1px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px;
+    height: 506px;
+    overflow: hidden;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+div.mixerChannel div.dropDown {
+    margin-top: -5px;
+}
+        div.mixerChannel > div.middle{
+            height: 180px;
+			padding-top: 5px;
+            margin-bottom: 5px;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        div.mixerChannel > input.titleBox {
+            background: transparent;
+            width: 47px;
+            font-family: calibri;
+            font-weight: bold;
+            height: 11px;
+            font-size: 12px;
+            border: 0;
+        }
+
+
+div.mixerChannel div.knob {
+    padding: 5px;
+}
+div.mixerChannel div.volumePanContainer div.knob{
+    margin-top: 5px;
+}

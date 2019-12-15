@@ -1,0 +1,7 @@
+<div class="knobContainer" data-ng-style="themeService.theme.styles.knob">
+    <div class="knobLabel"  data-ng-if="label != undefined">{{label}}</div>
+    <div data-ng-style="{webkitTransform: 'rotate(' + (rotationValue  * 320 - 160 ) +'deg)', width: actualKnobValue+'px', height:actualKnobValue+'px', borderColor: themeService.theme.styles.knob.borderColor}"  class="knobCircle" data-ng-mousedown="startMovingKnob($event)" data-ng-dblclick="resetToOriginal()">
+        <div data-ng-style="{borderColor: themeService.theme.styles.knob.borderColor, height: actualKnobValue/2+'px', marginLeft: actualKnobValue/2-2+'px'}" class="knobLine"></div>
+    </div>
+</div>
+

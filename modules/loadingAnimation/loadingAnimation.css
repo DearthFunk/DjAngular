@@ -1,0 +1,33 @@
+div.loadingAnimationSmallContainer {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+        div.loadingAnimationSmallContainer > div.entryContainer {
+            font-size: 14px;
+            text-align: left;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+                div.loadingAnimationSmallContainer > div.entryContainer > div.entry {
+
+                }
+                        div.loadingAnimationSmallContainer > div.entryContainer > div.entry > span.name {
+                            font-size: 18px;
+                        }
+                        div.loadingAnimationSmallContainer > div.entryContainer > div.entry > span.text {
+                            float: right;
+                        }
+
+        div.loadingAnimationSmallContainer > div.counterContainer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 40px;
+            padding-right: 5px;
+        }

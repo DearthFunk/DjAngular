@@ -1,0 +1,30 @@
+<div class="drumPadsContainer">
+
+    <div class="left">
+        <div class="buttonSelector"
+             data-send-placement="'top'" data-send-popover="uiToolTipService.values.changeKit"
+             data-selected-item="selectedKit" data-total-items="audioProcessingService.kits.length"></div>
+    </div>
+
+    <div class="right">
+        <div
+             data-ng-class="index == editingIndex ? 'drumPad activePad' : 'drumPad'"
+             data-ng-repeat="index in audioProcessingService.kits[selectedKit] track by $index"
+             data-ng-click="mapPad(index)"
+             data-ng-bind-html="bindCharacter(audioProcessingService.samples[index].kits[selectedKit].dp.keyCode.visual)"
+             data-ng-style="
+             audioProcessingService.samples[index].kits[selectedKit].dp.playing ?
+                themeService.theme.styles.drumPadsActive :
+                editingIndex == index ?
+                    themeService.theme.styles.drumPadsMouse :
+                    themeService.theme.styles.drumPads">
+        </div>
+    </div>
+
+    <div class="padModificationContainer" data-ng-if="editingIndex != -1">
+        <div class="title" data-ng-style="themeService.theme.styles.drumPadsModTitle">{{audioProcessingService.samples[editingIndex].fileName}}</div>
+        <div class="sampleModifier" data-entry="audioProcessingService.samples[editingIndex].kits[selectedKit].dp.edit"></div>
+    </div>
+
+
+</div>

@@ -1,0 +1,10 @@
+<div class="numberModifierContainer" data-ng-style="themeService.theme.styles.numberModifier">
+    <div class="label" data-ng-if="label != undefined" data-ng-style="themeService.theme.styles.numberModifierLabel">
+        {{label}}
+    </div>
+    <div class="right">{{numValue}}</div>
+    <div class="left">
+        <div class="arrowContainer" data-ng-mousedown="modifyValue(1)"><i class="fa fa-caret-up"></i></div>
+        <div class="arrowContainer" data-ng-mousedown="modifyValue(-1)"><i class="fa fa-caret-down"></i></div>
+    </div>
+</div>

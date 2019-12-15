@@ -1,0 +1,15 @@
+<div class="loadingAnimationSmallContainer" data-ng-style="{opacity: mainOpacity/10}">
+    <div class="entryContainer">
+        <div class="entry"
+             data-ng-repeat="item in loadingText track by $index"
+             data-ng-style="{opacity: 1- $index / totalSamples, color: item.success ? themeService.theme.styles.global.loadingText : '#FF0000'}">
+
+            <!--<span class="name">{{item.name}}</span>-->
+            <span class="text">{{item.textValue}}</span><br>
+
+        </div>
+    </div>
+
+    <div class="counterContainer" data-ng-style="{color:themeService.theme.styles.global.loadingText}">{{counter}}</div>
+
+</div>

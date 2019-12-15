@@ -1,0 +1,58 @@
+div.synthControlsContainer {
+    text-align: center;
+}
+    div.synthControlsContainer div.bubble {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        padding: 10px;
+        text-align: center;
+    }
+            div.synthControlsContainer div.bubble > div.radioButton {
+                display: block;
+                text-align: left;
+            }
+
+    div.synthControlsContainer div.topRow {
+        border-bottom: 2px solid;
+    }
+    div.synthControlsContainer > div.bottomRow{
+
+    }
+
+
+    div.synthControlsContainer div.oscillators {
+
+    }
+    div.synthControlsContainer div.oscillators > div.osc {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    div.synthControlsContainer div.phaser {
+
+    }
+    div.synthControlsContainer div.tremolo {
+        border-left: 2px solid;
+        border-right: 2px solid;
+    }
+    div.synthControlsContainer div.wahwah {
+    }
+    div.synthControlsContainer div.delay {
+        border-left: 2px solid;
+    }
+    div.synthControlsContainer div.filter {
+        height: 100%;
+        border-right: 2px solid;
+        border-left: 2px solid;
+        vertical-align: bottom;
+    }
+    div.synthControlsContainer div.overdrive {
+        padding-top: 15px;
+    }
+    div.synthControlsContainer div.bitcrusher {
+
+    }
+

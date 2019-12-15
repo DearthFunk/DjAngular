@@ -1,0 +1,10 @@
+<div class="verticalBarContainer" data-ng-mousedown="movePos($event)">
+    <div class="verticalBar" data-ng-style="themeService.theme.styles.slider">
+        <div class="sliderThumbContainer"
+            data-ng-style="{top: (getSliderValue() * (height-thumbHeight)) + 'px'}"
+            data-ng-mousedown="startMovingSlider($event)"
+            data-ng-dblclick="resetToOriginal()">
+            <div class="sliderThumb" data-ng-style="themeService.theme.styles.sliderThumb"></div>
+        </div>
+    </div>
+</div>

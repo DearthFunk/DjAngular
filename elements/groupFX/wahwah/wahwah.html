@@ -1,0 +1,15 @@
+<div class="wahwahContainer">
+    <div class="knobRow" data-ng-if="showBypass">
+        <div class="radioButton" data-check-value="values.bypass" data-size="10" data-width="75" data-label="'Bypass'"></div>
+    </div>
+    <div class="radioButton" data-check-value="values.automode" data-size="10" data-width="95" data-label="'Auto'"></div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Base'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="values.baseFrequency"></div>
+        <div class="knob" data-label="'Oct'"   data-knob-size="30" data-min-value="1" data-max-value="6" data-knob-value="values.excursionOctaves"></div>
+    </div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Sweep'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="values.sweep"></div>
+        <div class="knob" data-label="'Rez'"   data-knob-size="40" data-min-value="1" data-max-value="100" data-knob-value="values.resonance"></div>
+        <div class="knob" data-label="'Sens'"   data-knob-size="40" data-min-value="-1" data-max-value="1" data-knob-value="values.sensitivity"></div>
+    </div>
+</div>

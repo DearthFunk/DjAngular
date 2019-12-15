@@ -1,0 +1,9 @@
+<div class="radioButtonContainer" data-ng-click="checkValue = !checkValue" data-ng-style="themeService.theme.styles.radioButton">
+
+    <div class="label" data-ng-if="label != undefined && whichSide == 0">{{label}}</div>
+    <div class="radioButtonBox" data-ng-style="themeService.theme.styles.radioButton">
+        <div class="inner" data-ng-show="checkValue" data-ng-style="themeService.theme.styles.radioButtonInner"></div>
+    </div>
+    <div class="label" data-ng-if="label != undefined && whichSide == 1">{{label}}</div>
+
+</div>

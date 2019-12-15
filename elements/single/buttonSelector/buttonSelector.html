@@ -1,0 +1,12 @@
+<div class="buttonSelectorContainer verticalScrollBar">
+    <div class="button"
+         data-popover="{{sendPopover}}" data-popover-placement="{{sendPlacement}}" data-popover-trigger="{{uiToolTipService.trigger}}"
+         data-ng-repeat="item in getNumber(totalItems) track by $index"
+         data-ng-click="changeVal($index)"
+         data-ng-style="themeService.theme.styles.buttonSelector">
+        <div class="buttonInner"
+             data-ng-show="selectedItem==$index"
+             data-ng-style="themeService.theme.styles.buttonSelectorInner">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="actionIconsContainer" data-ng-style="themeService.theme.styles.actionIcons">
+    <span data-ng-repeat="item in iconEntries track by $index" data-ng-style="{fontSize: actualFontSize+'px'}">
+
+        <i class="fa" data-ng-if="item.type == 'toggle'"  data-ng-class="item.classToggle ? item.inactiveClass : item.activeClass"
+           data-ng-click="item.actionableFunction(repeatIndex,entry)"
+           data-popover="{{uiToolTipService.values[item.popover]}}"
+           data-popover-placement="{{item.placement}}"
+           data-popover-trigger="{{uiToolTipService.trigger}}"></i>
+
+        <i class="fa" data-ng-if="item.type == 'toggleEntry'" data-ng-class="entry[item.toggleEntry] ? item.inactiveClass : item.activeClass"
+           data-ng-click="item.actionableFunction(repeatIndex,entry)"
+           data-popover="{{uiToolTipService.values[item.popover]}}"
+           data-popover-placement="{{item.placement}}"
+           data-popover-trigger="{{uiToolTipService.trigger}}"></i>
+
+        <i class="fa" data-ng-if="item.type == 'control'"  data-ng-class="item.class"
+           data-ng-click="item.actionableFunction(repeatIndex,entry)"
+           data-popover="{{uiToolTipService.values[item.popover]}}"
+           data-popover-placement="{{item.placement}}"
+           data-popover-trigger="{{uiToolTipService.trigger}}"></i>
+    </span>
+</div>

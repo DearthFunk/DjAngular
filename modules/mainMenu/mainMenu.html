@@ -1,0 +1,64 @@
+<div class="mainMenuContainer" data-ng-switch="selectedPanel"data-ng-mouseleave="showPanel(2)">
+    <div class="panel panel0 verticalScrollBar" data-ng-style="uiThemeService.theme.styles.menu" data-ng-show="selectedPanel == 0">
+        <div class="inner" data-ng-switch="selectedSettingsPanel">
+            <div data-ng-switch-when="1" class="settingsAnimation"><div class="settingsMIDI content"></div></div>
+            <div data-ng-switch-when="2" class="settingsAnimation"><div class="settingsTheme content" ></div></div>
+            <div data-ng-switch-when="3" class="settingsAnimation"><div class="settingsVisualizations content" ></div></div>
+            <div data-ng-switch-when="4" class="settingsAnimation"><div class="settingsUI content"></div></div>
+        </div>
+    </div>
+
+    <div class="panel panel1" data-ng-style="uiThemeService.theme.styles.menu" data-ng-show="selectedPanel < 2">
+        <div class="inner" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <div class="inputLabel">AUDIO:</div>
+            <div class="dropDown"
+                 data-list="addAudioModules"
+                 data-key="'name'"
+                 data-selected="audioModuleToAdd"
+                 data-unique-function="addModule"
+                 data-send-back="true"
+                 data-width="120"
+                 data-height="20"></div>
+            <div class="inputLabel">CONTROLS:</div>
+            <div class="dropDown"
+                 data-list="addControlModules"
+                 data-key="'name'"
+                 data-selected="controlModuleToAdd"
+                 data-unique-function="addModule"
+                 data-send-back="false"
+                 data-width="120"
+                 data-height="20"></div>
+            <div class="inputLabel">VISUALIZE:</div>
+            <div class="dropDown"
+                 data-list="visualizationProcessingService.visualizations"
+                 data-key="'name'"
+                 data-selected="visualizationProcessingService.visualization"
+                 data-width="120"
+                 data-height="20"></div>
+        </div>
+        <div class="inner" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+
+            <div class="settingsLink"
+                 data-ng-repeat="(item,data) in controls | orderObjectBy: 'order':false"
+                 data-ng-click="showSettings(data)"
+                 data-ng-mouseover="data.hover=true"
+                 data-ng-mouseleave="data.hover=false"
+                 data-ng-style="data.hover ? uiThemeService.theme.styles.menuHighlight : ''">
+                <span class="sectionTitleText">{{data.name}}</span>
+            </div>
+            <div class="settingsLink" data-ng-click="showSettings(1)">{{uiService.midiSettings.name}}</div>
+            <div class="settingsLink" data-ng-click="showSettings(2)">{{uiService.themeCreator.name}}</div>
+            <div class="settingsLink" data-ng-click="showSettings(3)">{{uiService.visualizations.name}}</div>
+            <div class="settingsLink" data-ng-click="showSettings(4)">{{uiService.userInterface.name}}</div>
+            <div class="settingsLink" data-ng-click="saveSong()">SAVE</div>
+            <div class="settingsLink" data-ng-click="loadSong()">LOAD</div>
+        </div>
+    </div>
+
+    <div class="panel panel2"  data-ng-style="uiThemeService.theme.styles.menu" data-ng-click="selectedPanel==0 ? showPanel(2) : selectedPanel==1 ? showPanel(2) : showPanel(1)">
+        <i class="fa fa-caret-right"></i><br>
+        <i class="fa fa-caret-right"></i><br>
+        <i class="fa fa-caret-right"></i>
+    </div>
+
+</div>

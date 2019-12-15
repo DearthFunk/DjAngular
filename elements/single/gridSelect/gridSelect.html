@@ -1,0 +1,7 @@
+<div class="groupSelectContainer">
+    <span class="group"
+         data-ng-click="selectGroup($index)"
+         data-ng-style="$index == gridValue ? themeService.theme.styles.gridSelectActive : themeService.theme.styles.gridSelect"
+         data-ng-repeat="group in getArray(gridLength) track by $index">
+    </span>
+</div>

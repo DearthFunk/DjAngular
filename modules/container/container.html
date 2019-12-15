@@ -1,0 +1,31 @@
+<div class="mainContainer"
+     data-ng-mousedown="bringModuleToFront()"
+     data-ng-style="themeService.theme.styles.container">
+
+    <div class="topRow" data-ng-style="themeService.theme.styles.containerTopRow" >
+        <div class="menuFullScreen"
+             data-popover-trigger="{{uiToolTipService.trigger}}"
+             data-popover="{{uiToolTipService.values[moduleValue.module]}}"
+             data-popover-placement="top"
+             data-ng-style="themeService.theme.styles.containerIcons"
+             data-ng-mousedown="moveModule($event)"
+             data-ng-dblclick="fullScreen(true)">
+            {{moduleValue.name}} <span data-ng-if="isAudioModule">: {{channel.channelName}}</span>
+        </div>
+        <div class="actionIcons" data-font-size="16" data-icon-entries="topRightIcons"></div>
+    </div>
+
+    <div class="loading"  data-ng-show="!audioProcessingService.buffered" data-ng-style="themeService.theme.styles.loadingAnimation">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+
+    <div class="contents" data-ng-show="audioProcessingService.buffered"></div>
+
+    <div class="resizeDiv canvasWithRoundedCorners"
+         data-ng-mousedown="resizeModule($event)"
+         data-ng-dblclick="resetSize()"
+         data-ng-show="moduleValue.enableResize">
+        <div class="resizeCover" data-ng-style="themeService.theme.styles.containerResize"></div>
+    </div>
+
+</div>

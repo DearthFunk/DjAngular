@@ -1,0 +1,39 @@
+<div class="gridContainer verticalScrollBar">
+    <div class="rowContainer">
+        <div class="row" data-ng-repeat="index in audioProcessingService.kits[kit] track by $index">
+            <div class="rowTitle"
+                 data-popover-trigger="{{uiToolTipService.trigger}}"
+                 data-popover="{{uiToolTipService.values.gridName}}"
+                 data-popover-placement="right"
+                 data-ng-click="toggleVisible(index)"
+                 data-ng-style="themeService.theme.styles.grid">{{audioProcessingService.samples[index].fileName}}</div>
+
+            <div class="gridSelect" data-ng-if="gridSelect" data-grid-value="audioProcessingService.samples[index].kits[kit][type].group" data-grid-length="6"></div>
+
+            <div class="actionIcons" data-ng-if="actionIcons != undefined" data-font-size="fontSize" data-repeat-index="index" data-entry="audioProcessingService.samples[index].kits[kit][type]" data-icon-entries="actionIcons"></div>
+
+            <div class="cell"
+                 data-ng-repeat="cell in audioProcessingService.samples[index].kits[kit][type].values track by $index"
+                 data-ng-click="click($event,index,$index)"
+                 data-ng-mouseDown="mouseDown($event,index,$index)"
+                 data-ng-mouseMove="mouseMove($event,index,$index)"
+                 data-ng-style="{
+                    borderColor: themeService.theme.styles.gridCell.borderColor,
+                    marginLeft: $index % audioProcessingService.playValues.beats == 0 && $index != 0 ? barPadding + 'px' : '-1px'}"
+                 data-ng-if="$index < length"
+                 oncontextmenu="return false;">
+
+                <div data-ng-if="type == 'ag'" class="innerCell" data-ng-style=" cell ? themeService.theme.styles.gridCellActive : clickTrack == $index ? themeService.theme.styles.gridCellTempo : ''"></div>
+                <div data-ng-if="type == 'dm'" class="innerCell" data-ng-style=" cell !== '' ? themeService.theme.styles.gridCellActive : clickTrack == $index ? themeService.theme.styles.gridCellTempo : ''">{{cell}}</div>
+                <div data-ng-if="type == 'al'" class="innerCell" data-ng-style=" audioProcessingService.samples[index].kits[kit][type].position == $index ? themeService.theme.styles.gridCellActive : ''"></div>
+
+            </div>
+
+            <div class="rowControls" data-ng-style="themeService.theme.styles.gridCell" data-ng-if="audioProcessingService.samples[index].kits[kit][type].showGridControls">
+                <div class="sampleModifier" data-entry="audioProcessingService.samples[index].kits[kit][type].edit"></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

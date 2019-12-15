@@ -1,0 +1,10 @@
+<div class="groupActivatorsContainer">
+    <div class="button"
+         data-ng-repeat="item in groups track by $index"
+         data-ng-click="changeValue($index)"
+         data-ng-style="themeService.theme.styles.groupActivators">
+        <div data-ng-class="item.active ? 'buttonInner active' : 'buttonInner'"
+             data-ng-style="item.active ? themeService.theme.styles.groupActivatorsActive : ''">{{item.name}}</div>
+    </div>
+</div>
+

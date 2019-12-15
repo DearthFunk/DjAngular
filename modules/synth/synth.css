@@ -1,0 +1,45 @@
+div.synthContainer {
+    height: 100%;
+}
+
+    div.synthContainer > div.bottom {
+        height: 315px;
+        overflow: hidden;
+        margin: 10px;
+    }
+        div.synthContainer > div.bottom > div.buttonSelector {
+            padding: 20px 10px 0 10px;
+        }
+            div.synthContainer > div.bottom > div.buttonSelector > div.button {
+                width: 60px;
+                height: 30px;
+            }
+    div.synthContainer > div.top {
+        height: calc(100% - 335px);
+        display: inline-block;
+        width: 100%;
+    }
+        div.synthContainer > div.top > div.leftControls {
+            width: 55px;
+            display: inline-block;
+            height: 100%;
+        }
+            div.synthContainer > div.top > div.leftControls > div.actionIcons {
+                width: 100%;
+                margin: 14px 0 0 -2px;
+            }
+
+        div.synthContainer > div.top > div.canvasContainer {
+            height: 100%;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+            width: calc(100% - 66px);
+        }
+            div.synthContainer > div.top > div.canvasContainer > canvas.synthCanvas {
+                display: inline-block;
+                vertical-align: top;
+                margin-top:-1px;
+            }
+
+

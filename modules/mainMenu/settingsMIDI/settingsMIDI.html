@@ -1,0 +1,30 @@
+<div class="midiSettingsContainer">
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            MIDI INPUTS
+            <span class="resetLink" data-ng-click="refreshMIDIDevices()">Update Devices</span>
+        </div>
+        <div class="deviceRow"
+            data-ng-if="$index != 0"
+            data-ng-repeat="device in midiService.inputs track by $index">
+            <input onchange="this.blur()" type="checkbox" data-ng-model="device.active" data-ng-change="initDevice()"> {{device.deviceName}}
+        </div>
+
+    </div>
+
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            MIDI OUTPUTS
+            <span class="resetLink" data-ng-click="refreshMIDIDevices()">Update Devices</span>
+        </div>
+
+        <div class="deviceRow"
+            data-ng-if="$index != 0"
+            data-ng-repeat="device in midiService.outputs track by $index">
+            <input onchange="this.blur()" type="checkbox" data-ng-model="device.active" data-ng-change="initDevice()"> {{device.deviceName}}
+        </div>
+    </div>
+
+</div>

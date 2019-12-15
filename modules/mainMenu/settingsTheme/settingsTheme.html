@@ -1,0 +1,270 @@
+<div class="settingsThemeContainer">
+<input type="file" multiple>
+
+<div class="actionIcons" data-icon-entries="actionIcons" data-font-size="30"></div>
+
+<div class="mainSection">
+    <div class="row"><div class="title">LOAD:</div>
+        <div class="dropDown"
+             data-list="themeService.themes"
+             data-selected="themeIndex"
+             data-key="'theme'"
+             data-unique-function="changeTheme"
+             data-width="143"
+             data-height="20"></div>
+    </div>
+    <div class="row"><div class="title">NAME:</div>
+        <input type="text"
+               data-ng-model="themeService.theme.theme"
+               data-ng-style="themeService.theme.styles.dropDownMain"></div>
+
+    <div class="row"><div class="title">BACKGROUND:</div>
+
+        <div class="dropDown"
+             data-list="themeService.backgrounds"
+             data-selected="themeService.theme.styles.background"
+             data-key="'name'"
+             data-width="143"
+             data-height="20"></div></div>
+
+    <div class="row" data-ng-show="themeService.theme.styles.background == 0"><div class="title">COLOR:</div>
+        <input type="color" onchange="this.blur()"
+               class="customColor"
+               data-ng-model="backgroundColor"
+               data-ng-change="updateColor()"></div>
+</div>
+
+
+
+    <div class="headerNote" data-ng-if="themeService.theme.notEditable" >This Theme Is Not Editable,<br>Please Create A New One Or Copy<br> An Existing One First<br>Then You Can Edit The Copy.</div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Global</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.global.toolTipToggle"> Tool Tip<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.global.toolTipToggleHover"> Tool Tip Hover<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.global.toolTipToggleActive"> Tool Tip Hover Active<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.global.loadingText"> Loading Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.global.textShadowColor"> Text Shadow Color<br>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Elements</div>
+
+        <div class="subSectionHeader">Action Icons</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.actionIcons.color"> Color<br>
+        </div>
+
+        <div class="subSectionHeader">Button Selector</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.buttonSelector.borderColor"> Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.buttonSelectorInner.backgroundColor"> Background<br>
+        </div>
+
+        <div class="subSectionHeader">Drop Down</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownMain.color"> Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownMain.borderColor"> Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownMain.backgroundColor"> Background <br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownList.color"> List: Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownList.borderColor"> List: Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownList.backgroundColor"> List: Background <br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownListHover.backgroundColor"> List: Hover <br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.dropDownListDisabled.color"> List: Disabled Text <br>
+        </div>
+
+        <div class="subSectionHeader">Grid</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.grid.color"> Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCell.borderColor"> Cell Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCell.color"> Cell Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCellTempo.backgroundColor"> Tempo Line<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCellTempo.color"> Tempo Line Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCellActive.backgroundColor"> Active Cell<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridCellActive.color"> Active Cell Text<br>
+        </div>
+
+        <div class="subSectionHeader">Grid Select</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.gridSelect.color"> Background<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.gridSelect.opacity"> Opacity<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.gridSelectActive.background"> Active Background<br>
+        </div>
+
+        <div class="subSectionHeader">Group Activators</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.groupActivators.color"> Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.groupActivators.borderColor"> Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.groupActivatorsActive.color"> Active Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.groupActivatorsActive.backgroundColor"> Active Background<br>
+        </div>
+
+        <div class="subSectionHeader">Knob</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.knob.borderColor"> Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.knob.color"> Text<br>
+        </div>
+
+        <div class="subSectionHeader">Number Modifier</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.numberModifier.color"> Color<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.numberModifierLabel.color"> Top Label<br>
+        </div>
+
+        <div class="subSectionHeader">Radio Button</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.radioButton.borderColor"> Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.radioButton.color"> Text<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.radioButtonInner.backgroundColor"> Background<br>
+        </div>
+
+        <div class="subSectionHeader">Sample Editor</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.editSample.backgroundColor"> Background Color<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.editSample.lineColor"> Line Color<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.editSample.markers"> Markers<br>
+        </div>
+
+        <div class="subSectionHeader">Slider: Large Vertical</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.sliderVerticalLargeBackground.backgroundColor"> Background<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.sliderVerticalLargeThumb.borderColor"> Thumb Border<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.sliderVerticalLargeThumb.backgroundColor"> Thumb Background<br>
+        </div>
+
+        <div class="subSectionHeader">Slider: Horizontal\Vertical</div>
+        <div class="subSection">
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.slider.backgroundColor"> Bar<br>
+            <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.sliderThumb.backgroundColor"> Thumb<br>
+        </div>
+
+    </div>
+
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Container</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.loadingAnimation.color"> Loading Animation<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.containerBackground.color"> Background Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.container.borderColor"> Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.containerBackground.opacity"> Background Opacity<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.container.shadowColor"> Shadow Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.shadowSize.min}}" max="{{constraints.shadowSize.max}}" step="{{constraints.shadowSize.step}}" data-ng-model="toCompile.container.shadowSize"> Shadow Size<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.shadowBlur.min}}" max="{{constraints.shadowBlur.max}}" step="{{constraints.shadowBlur.step}}" data-ng-model="toCompile.container.shadowBlur"> Shadow Blur<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.containerTopRow.borderColor"> Top Bar Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.containerIcons.color"> Top Bar Icons<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.containerTitle.borderColor"> Top Bar Title Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.containerTitle.color"> Top Bar Title Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.containerResize.backgroundColor"> Resize Corner<br>
+
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.tempoTracker.color"> Tempo Tracker<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.tempoTracker.opacity"> Opacity<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.tempoTrackerActive.color"> Tempo Tracker Active<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.tempoTrackerActive.opacity"> Active Opacity<br>
+
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Drum Pads</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPads.backgroundColor"> Pad Background:<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPads.borderColor"> Pad Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPads.color"> Pad Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsActive.backgroundColor"> Pad Active Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsActive.borderColor"> Pad Active Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsActive.color"> Pad Active Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsMouse.backgroundColor"> Pad Selected Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsMouse.borderColor"> Pad Selected Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsMouse.color"> Pad Selected Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.drumPadsModTitle.color"> Pad Modification Title<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">FX Editor</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.fxEditorColumn.color"> Main Column Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.fxEditorColumn.borderColor"> Main Columm Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.fxEditorFx.color"> FX Entry Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.fxEditorFx.borderColor"> FX Entry Border<br>
+
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Keyboard</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.keyboard.keyBackground"> Key Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.keyboard.textColor"> Key Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.keyboard.borderColor"> Key Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.keyboardHeatMap.color"> Heat Map<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.keyboardHeatMap.opacity"> Heat Map Opacity<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Line In</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.lineIn.color"> Icon<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.lineInActive.color"> Icon Active<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Menu</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.menu.color"> Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.menu.borderColor"> Border Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.menuBackground.color"> Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.menuBackground.opacity"> Background Opacity<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="toCompile.menuHighlight.color"> Highlight<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="{{constraints.opacity.min}}" max="{{constraints.opacity.max}}" step="{{constraints.opacity.step}}" data-ng-model="toCompile.menuHighlight.opacity"> Highlight Opacity<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Mixer</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButton.backgroundColor"> Button Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButton.borderColor"> Button Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButton.color"> Button Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButtonActive.backgroundColor"> Button Active Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButtonActive.borderColor"> Button Active Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerButtonActive.color"> Button Active Text<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerMeterBackground.backgroundColor"> Meter Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerMeter.backgroundColor"> Meter Gain<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerMeterClipLine.borderColor"> Meter Clip Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerBorder.borderColor"> Section Borders<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerText.color"> Track Titles<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.mixerTrackBorder.borderColor"> Track Border<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">Synth</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.keyboardBlack"> Keyboard Sharp Key<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.keyboardWhite"> Keyboard Key<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.keyboardBorder"> Keyboard Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.keyboardSelected"> Keyboard Selected<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.looperMarker"> Looper Marker<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.looperLine"> Looper Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.looperSection"> Looper Fade<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.gainCircle"> Gain Circle<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.gainLine"> Gain Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.sectionLines"> Section Lines<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.gridLine"> Grid Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.gridLineBar"> Grid Line (on Bar)<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.noteBorder"> Note Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.noteColor"> Note Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.playbackDot"> Playback Dot<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.scrollLine"> Scroll Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.scrollBorder"> Scroll Thumb Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synth.scrollBackground"> Scroll Thumb<br>
+
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synthControlsBorder.borderColor"> Controls Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.synthControlsText.color"> Controls Text<br>
+
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">TouchPad</div>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPadBorder.borderColor"> Border<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.backgroundColor"> Background<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.textColor"> Text Color<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.diagonalColor"> Diagonal Line<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="range" min="0" max="10" step="1" data-ng-model="themeService.theme.styles.touchPad.diagonalThickness"> Diagonal Line Thickness<br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.animationStart"> Animation Start <br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.animationMiddle"> Animation Middle <br>
+        <input data-ng-disabled="themeService.theme.notEditable" type="color" onchange="this.blur()" data-ng-model="themeService.theme.styles.touchPad.animationEnd"> Animation End <br>
+    </div>
+
+</div>

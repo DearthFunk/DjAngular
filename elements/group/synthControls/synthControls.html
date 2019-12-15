@@ -1,0 +1,113 @@
+<div class="synthControlsContainer">
+
+        <div class="dropDown"
+             data-list="synthTemplates"
+             data-key="'name'"
+             data-selected="selectedSynth"
+             data-width="200"
+             data-height="20">
+        </div>
+
+        <div class="topRow" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+            <div class="bubble oscillators">
+                <div class="osc" data-ng-repeat="wave in synthTemplates[selectedSynth].waves track by $index">
+                    <div class="title" data-ng-style="uiThemeService.theme.styles.synthControlsText">OSC{{$index+1}}</div>
+                    <div class="dropDown"
+                         data-list="optionWaveTypes"
+                         data-key="'name'"
+                         data-selected="wave.type"
+                         data-width="90"
+                         data-height="20">
+                    </div>
+                    <div class="knob tune" data-label="'Tune'" data-knob-size="25" data-min-value="detuneRange*-1" data-max-value="detuneRange" data-knob-value="wave.detune"></div>
+                    <div class="knob gain" data-label="'Gain'" data-knob-value="wave.gain"></div>
+                </div>
+            </div>
+
+            <div class="bubble filter" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.filter.bypass" data-size="10" data-width="105" data-label="'Filter'"></div>
+                <div class="dropDown"
+                     data-list="optionFilterTypes"
+                     data-key="'name'"
+                     data-selected="synthTemplates[selectedSynth].controls.filter.filterType"
+                     data-width="130"
+                     data-height="20">
+                </div>
+                <div>
+                    <div class="knob" data-label="'Freq'"   data-knob-size="40" data-min-value="20" data-max-value="22050" data-knob-value="synthTemplates[selectedSynth].controls.filter.frequency"></div>
+                    <div class="knob" data-label="'Q'"   data-knob-size="40" data-min-value="0.001" data-max-value="100" data-knob-value="synthTemplates[selectedSynth].controls.filter.Q"></div>
+                    <div class="knob" data-label="'Gain'"   data-knob-size="40" data-min-value="-40" data-max-value="40" data-knob-value="synthTemplates[selectedSynth].controls.filter.gain"></div>
+                </div>
+            </div>
+
+            <div class="bubble overdrive" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.overdrive.bypass" data-size="10" data-width="105" data-label="'Overdrive'"></div>
+                <div class="dropDown"
+                     data-list="optionOverdriveFilterTypes"
+                     data-key="'name'"
+                     data-selected="synthTemplates[selectedSynth].controls.overdrive.algorithmIndex"
+                     data-width="130"
+                     data-height="20">
+                </div>
+                <div>
+                    <div class="knob" data-label="'Gain'"   data-knob-size="40" data-knob-value="synthTemplates[selectedSynth].controls.overdrive.outputGain"></div>
+                    <div class="knob" data-label="'Drive'"   data-knob-size="40" data-knob-value="synthTemplates[selectedSynth].controls.overdrive.drive"></div>
+                    <div class="knob" data-label="'Curve'"   data-knob-size="40" data-knob-value="synthTemplates[selectedSynth].controls.overdrive.curveAmount"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottomRow">
+            <div class="bubble phaser" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.phaser.bypass" data-size="10" data-width="105" data-label="'Phaser'"></div>
+                <div class="knob" data-label="'Rate'"   data-knob-size="30" data-min-value="0.01" data-max-value="8" data-knob-value="synthTemplates[selectedSynth].controls.phaser.rate"></div>
+                <div class="knob" data-label="'Depth'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.phaser.depth"></div>
+                <div>
+                    <div class="knob" data-label="'Fdbk'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.phaser.feedback"></div>
+                    <div class="knob" data-label="'Phase'"   data-knob-size="40" data-min-value="0" data-max-value="180" data-knob-value="synthTemplates[selectedSynth].controls.phaser.stereoPhase"></div>
+                    <div class="knob" data-label="'Mod'"   data-knob-size="40" data-min-value="500" data-max-value="1500" data-knob-value="synthTemplates[selectedSynth].controls.phaser.baseModulationFrequency"></div>
+                </div>
+            </div>
+
+            <div class="bubble tremolo" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.tremolo.bypass" data-size="10" data-width="105" data-label="'Tremolo'"></div>
+                <div class="knob" data-label="'Int.'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.tremolo.intensity"></div>
+                <div>
+                    <div class="knob" data-label="'Rate'"   data-knob-size="40" data-min-value="0.001" data-max-value="8" data-knob-value="synthTemplates[selectedSynth].controls.tremolo.rate"></div>
+                    <div class="knob" data-label="'Phase'"   data-knob-size="40" data-min-value="0" data-max-value="180" data-knob-value="synthTemplates[selectedSynth].controls.tremolo.stereoPhase"></div>
+                </div>
+            </div>
+
+            <div class="bubble wahwah" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.wahwah.bypass" data-size="10" data-width="105" data-label="'Wahwah'"></div>
+                <div class="knob" data-label="'Base'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.wahwah.baseFrequency"></div>
+                <div class="knob" data-label="'Oct'"   data-knob-size="30" data-min-value="1" data-max-value="6" data-knob-value="synthTemplates[selectedSynth].controls.wahwah.excursionOctaves"></div>
+                <div>
+                    <div class="knob" data-label="'Sweep'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.wahwah.sweep"></div>
+                    <div class="knob" data-label="'Rez'"   data-knob-size="40" data-min-value="1" data-max-value="100" data-knob-value="synthTemplates[selectedSynth].controls.wahwah.resonance"></div>
+                </div>
+            </div>
+
+            <div class="bubble delay" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.delay.bypass" data-size="10" data-width="105" data-label="'Delay'"></div>
+                <div class="knob" data-label="'Wet'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.delay.wetLevel"></div>
+                <div class="knob" data-label="'Dry'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.delay.dryLevel"></div>
+                <div>
+                    <div class="knob" data-label="'Fdbk'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.delay.feedback"></div>
+                    <div class="knob" data-label="'Dly'"   data-knob-size="40" data-min-value="0" data-max-value="300" data-knob-value="synthTemplates[selectedSynth].controls.delay.delayTime"></div>
+                    <div class="knob" data-label="'Cut'"   data-knob-size="40" data-min-value="20" data-max-value="22050" data-knob-value="synthTemplates[selectedSynth].controls.delay.cutoff"></div>
+                </div>
+            </div>
+<!--
+            <div class="bubble bitCrusher" data-ng-style="uiThemeService.theme.styles.synthControlsBorder">
+                <div class="radioButton" data-check-value="synthTemplates[selectedSynth].controls.bitCrusher.bypass" data-size="10" data-width="105" data-label="'BitCrusher'"></div>
+                <div class="knob" data-label="'Bits'"  data-knob-size="30" data-min-value="1" data-max-value="16" data-knob-value="synthTemplates[selectedSynth].controls.bitCrusher.bits"></div>
+                <div class="knob" data-label="'Buff'"   data-knob-size="30" data-min-value="256" data-max-value="16384" data-knob-value="synthTemplates[selectedSynth].controls.bitCrusher.bufferSize"></div>
+                <div class="knob" data-label="'Freq'"   data-knob-size="30" data-min-value="0.0001" data-max-value="1" data-knob-value="synthTemplates[selectedSynth].controls.bitCrusher.normFreq"></div>
+            </div>
+-->
+
+        </div>
+
+</div>

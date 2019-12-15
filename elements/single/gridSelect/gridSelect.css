@@ -1,0 +1,12 @@
+div.groupSelectContainer {
+    display: inline-block;
+    text-align: center;
+}
+    div.groupSelectContainer > span.group {
+        display: table;
+        width: 9px;
+        height: 15px;
+        margin: 0 1px 1px 0px;
+        cursor: pointer;
+        float: left;
+    }

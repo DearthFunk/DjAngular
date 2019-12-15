@@ -1,0 +1,16 @@
+<div class="compressorContainer">
+    <div class="knobRow" data-ng-if="showBypass">
+        <div class="radioButton" data-check-value="values.bypass" data-size="10" data-width="75" data-label="'Bypass'"></div>
+    </div>
+    <div class="radioButton" data-check-value="values.automakeup" data-size="10" data-width="95" data-label="'Auto'"></div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Thrsd'"   data-knob-size="40" data-min-value="-100" data-max-value="0" data-knob-value="values.threshold"></div>
+        <div class="knob" data-label="'Gain'"   data-knob-size="40" data-min-value="0" data-max-value="20" data-knob-value="values.makeupGain"></div>
+        <div class="knob" data-label="'Atck'"   data-knob-size="40" data-min-value="0" data-max-value="1000" data-knob-value="values.attack"></div>
+    </div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Reles'"   data-knob-size="40" data-min-value="0" data-max-value="3000" data-knob-value="values.release"></div>
+        <div class="knob" data-label="'Ratio'"   data-knob-size="40" data-min-value="1" data-max-value="20" data-knob-value="values.ratio"></div>
+        <div class="knob" data-label="'Knee'"   data-knob-size="40" data-min-value="0" data-max-value="40" data-knob-value="values.knee"></div>
+    </div>
+</div>

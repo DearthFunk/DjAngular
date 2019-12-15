@@ -1,0 +1,20 @@
+<div class="filterContainer">
+    <div class="knobRow" data-ng-if="showBypass">
+        <div class="radioButton" data-check-value="values.bypass" data-size="10" data-width="75" data-label="'Bypass'"></div>
+    </div>
+    <div class="knobRow">
+        <div class="dropDown"
+             data-list="optionWaveTypes"
+             data-key="'name'"
+             data-selected="values.filterType"
+             data-width="75"
+             data-height="20">
+        </div>
+    </div>
+
+    <div class="knobRow">
+        <div class="knob" data-label="'Freq'"   data-knob-size="40" data-min-value="20" data-max-value="22050" data-knob-value="values.frequency"></div>
+        <div class="knob" data-label="'Q'"   data-knob-size="40" data-min-value="0.001" data-max-value="100" data-knob-value="values.Q"></div>
+        <div class="knob" data-label="'Gain'"   data-knob-size="40" data-min-value="-40" data-max-value="40" data-knob-value="values.gain"></div>
+    </DIV>
+</div>

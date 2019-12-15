@@ -1,0 +1,39 @@
+div.fxEditorColumnContainer {
+
+}
+    div.fxEditorColumnContainer > div.fxUnit {
+        padding: 5px 0 10px 0;
+        border-top: 1px solid;
+
+    }
+
+    div.fxEditorColumnContainer > div.fxUnit > div.fxTopMenu {
+        margin-bottom: 5px;
+    }
+
+        div.fxEditorColumnContainer > div.fxUnit > div.fxTopMenu > div.radioButton {
+            vertical-align: top;
+            margin-top: 3px;
+        }
+
+        div.fxEditorColumnContainer > div.fxUnit > div.fxTopMenu > div.fxTitle {
+            font-size: 18px;
+            display: inline-block;
+        }
+        div.fxEditorColumnContainer > div.fxUnit > div.fxTopMenu > div.actionIcons {
+            float: right;
+
+        }
+
+
+
+
+
+
+div.fxEditorColumnContainer > div.fxUnit div.knobRow {
+    text-align: center;
+    padding: 5px 0;
+}
+div.fxEditorColumnContainer > div.fxUnit div.knobRow > div.knob {
+    margin: 0 5px;
+}

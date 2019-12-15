@@ -1,0 +1,115 @@
+div.sampleManagerContainer {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+        div.sampleManagerContainer > input.fileButton {
+            display: none;
+        }
+
+        div.sampleManagerContainer > div.headerSection {
+            border-bottom: 1px solid;
+            margin-bottom: 8px;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+            div.sampleManagerContainer > div.headerSection > div.addSample {
+                float: right;
+                cursor: pointer;
+            }
+
+
+
+div.sampleManagerContainer > div.left {
+    display: inline-block;
+    height: calc(100% - 38px);
+    overflow-y: scroll;
+    padding-right: 13px;
+    width: 240px;
+    }
+
+        div.sampleManagerContainer > div.left > div.sample {
+            font-size: 17px;
+            vertical-align: top;
+            margin-left: 5px;
+            cursor: move;
+        }
+
+            div.sampleManagerContainer > div.left > div.sample > span {
+                width: 144px;
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            div.sampleManagerContainer > div.left > div.sample > div.actionIcons {
+                margin-right: 11px;
+            }
+            div.sampleManagerContainer > div.left > div.sample > div.actionIcons i {
+                width: 13px;
+                height: 13px;
+            }
+
+                        div.sampleManagerContainer > div.left > div.sample > input[type="text"] {
+                            background-color: rgba(0,0,0,0);
+                            border-bottom: 1px solid #FFFFFF;
+                            border-top: 1px solid #FFFFFF;
+                            border-left: 0px;
+                            border-right: 0px;
+                            width: 144px;
+                            font-size: 16px;
+                            margin-bottom: 5px;
+                        }
+
+
+
+div.sampleManagerContainer > div.right {
+    display: inline-block;
+    width: 700px;
+    vertical-align: top;
+    padding-left: 10px;
+    height: calc(100% - 38px);
+}
+    div.sampleManagerContainer > div.right > div.rightHeader {
+        text-align: center;
+        border-bottom: 1px solid;
+        margin-bottom: 5px;
+        padding: 10px 0px;
+        height: 32px;
+        position: relative;
+    }
+        div.sampleManagerContainer > div.right > div.rightHeader > div.fadeOutMessage {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 59px;
+            top: -7px;
+            font-size: 44px;
+            background-color: #FF0000;
+        }
+        div.sampleManagerContainer > div.right > div.rightHeader > div.actionIcons {
+            float: left;
+            margin-top: -3px;
+
+        }
+    div.sampleManagerContainer > div.right > div.rightEditor {
+        height: calc(100% - 56px);
+        overflow-y: scroll;
+    }
+        div.sampleManagerContainer > div.right > div.rightEditor > div.row {
+            padding-right: 10px;
+            font-size: 25px;
+        }
+
+        div.sampleManagerContainer > div.right > div.rightEditor > div.row > div.actionIcons {
+            margin-right: 15px;
+        }
+
+        div.sampleManagerContainer > div.right > div.rightEditor > div.row > div.editSample {
+            height: 115px;
+            margin-bottom: 10px;
+            border-top: 1px solid #FFFFFF;
+            border-bottom: 1px solid #FFFFFF;
+
+        }

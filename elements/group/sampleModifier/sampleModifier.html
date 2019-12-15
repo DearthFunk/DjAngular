@@ -1,0 +1,23 @@
+<div class="sampleModifierContainer">
+    <div class="leftSide">
+        <div class="knob" data-label="'Gain'" data-min-value="0" data-max-value="1" data-reset-value="1" data-knob-value="entry.gain"></div>
+        <div class="knob"
+             data-ng-if="!entry.tempoSync"
+             data-label="'Speed'"
+             data-min-value="0.0001"
+             data-max-value="2.0001"
+             data-reset-value="1"
+             data-knob-value="entry.speed"></div>
+        <div class="numberModifierArray"
+             data-ng-if="entry.tempoSync"
+             data-label="'Speed'"
+             data-item-array="loopValues"
+             data-index="entry.loopIndex"></div>
+    </div><div class="rightSide">
+        <div data-ng-if="entry.tempoSync != undefined" class="radioButton" data-check-value="entry.tempoSync" data-size="10" data-width="110" data-label="'Tempo Sync'"></div>
+        <div data-ng-if="entry.reverse != undefined" class="radioButton" data-check-value="entry.reverse"   data-size="10" data-width="110" data-label="'Reverse'"></div>
+        <div data-ng-if="entry.loop != undefined" class="radioButton" data-check-value="entry.loop"      data-size="10" data-width="110" data-label="'Loop'"></div>
+        <div data-ng-if="entry.reMap != undefined" class="radioButton" data-check-value="entry.reMap"     data-size="10" data-width="110" data-label="'ReMap'"></div>
+    </div>
+
+</div>

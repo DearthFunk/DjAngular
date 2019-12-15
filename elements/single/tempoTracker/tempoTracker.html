@@ -1,0 +1,9 @@
+<div class="tempoTrackerContainer">
+    <span class="cell"
+         data-ng-style="{
+            width: 'calc(' + 100 / audioProcessingService.playValues.beats + '% - 1px)',
+            height: 'calc(' + 100 / audioProcessingService.playValues.bars + '% - 1px)',
+            backgroundColor: $index == audioProcessingService.clickTrack ? themeService.theme.styles.tempoTrackerActive.backgroundColor : themeService.theme.styles.tempoTracker.backgroundColor}"
+         data-ng-repeat="beat in getArray(audioProcessingService.playValues.beats * audioProcessingService.playValues.bars) track by $index">
+    </span>
+</div>

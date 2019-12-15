@@ -1,0 +1,27 @@
+div.sampleModifierContainer {
+
+}
+div.sampleModifierContainer > div.leftSide {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+        div.sampleModifierContainer > div.leftSide > div.knob {
+            margin: 0 5px;
+        }
+        div.sampleModifierContainer > div.leftSide > div.numberModifierArray {
+            width: 50px;
+        }
+
+div.sampleModifierContainer > div.rightSide {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: left;
+}
+        div.sampleModifierContainer > div.rightSide > div.radioButton {
+            margin: 0 5px;
+        }
+
+
+

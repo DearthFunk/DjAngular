@@ -1,0 +1,66 @@
+div.alertDialogCover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 999999999;
+}
+    div.alertDialogCover > div.alertDialogContainer {
+        width: 800px;
+        display: inline-block;
+        position: absolute;
+        background-color: #FFFFFF;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+        div.alertDialogCover > div.alertDialogContainer > div.headerRow {
+            padding: 16px;
+            font-size: 30px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-weight: bold;
+        }
+            div.alertDialogCover > div.alertDialogContainer > div.headerRow > span.title {
+
+            }
+
+            div.alertDialogCover > div.alertDialogContainer > div.headerRow > i {
+                cursor: pointer;
+                font-weight: normal;
+                font-size: 41px;
+                float: right;
+                margin-right: 5px;
+            }
+
+
+    div.alertDialogCover > div.alertDialogContainer > div.mainContainer {
+        padding: 30px;
+        font-size: 20px;
+        border-top: 1px solid #777777;
+        border-bottom: 1px solid #777777;
+    }
+
+
+    div.alertDialogCover > div.alertDialogContainer > div.buttonContainer {
+        text-align: center;
+    }
+        div.alertDialogCover > div.alertDialogContainer > div.buttonContainer > div.button {
+            display: inline-block;
+            width: 159px;
+            border: 1px solid;
+            margin: 14px;
+            font-size: 22px;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #9BCEFA;
+            font-weight: bold;
+        }
+        div.alertDialogCover > div.alertDialogContainer > div.buttonContainer > div.button:hover {
+            background-color: #1D8DF0;
+        }

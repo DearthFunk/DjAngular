@@ -1,0 +1,11 @@
+div.visualizationsContainer {
+
+}
+div.visualizationsContainer span.resetLink {
+    float:  right;
+    cursor: pointer;
+}
+div.visualizationsContainer span.sectionTitle {
+    text-transform: uppercase;
+
+}

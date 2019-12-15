@@ -1,0 +1,15 @@
+div.actionIconsContainer {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+    div.actionIconsContainer > span {
+
+    }
+        div.actionIconsContainer > span > i{
+            cursor: pointer;
+            text-shadow: 1px 1px #000000;
+            height: 23px;
+            margin: 2px 0;
+            width: 20px;
+        }

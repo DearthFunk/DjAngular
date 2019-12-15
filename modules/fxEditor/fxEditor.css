@@ -1,0 +1,20 @@
+div.fxEditorContainer {
+
+}
+    div.fxEditorContainer > div.column {
+        border-left: 1px solid;
+        border-right: 1px solid;
+        padding: 0 10px;
+        width: 200px;
+        vertical-align: top;
+        display: table-cell;
+        height: 100%;
+    }
+        div.fxEditorContainer > div.column > div.columnTitleText{
+            font-size: 18px;
+            text-align: center;
+            border-bottom: 2px solid;
+        }
+
+
+

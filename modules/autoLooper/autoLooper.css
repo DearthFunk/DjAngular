@@ -1,0 +1,30 @@
+div.autoLooperContainer {
+    height: 100%;
+    width: 100%;
+}
+    div.autoLooperContainer > div.groupActivators {
+        margin-bottom: 10px;
+    }
+
+    div.autoLooperContainer > div.leftControls {
+        text-align: center;
+        width: 122px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px;
+    }
+
+        div.autoLooperContainer > div.leftControls > div.groupActivators {
+            width: 30px;
+        }
+        div.autoLooperContainer > div.leftControls > div.buttonSelector {
+            width: 30px;
+        }
+        div.autoLooperContainer > div.leftControls > div.actionIcons {
+            width: 30px;
+        }
+
+    div.autoLooperContainer > div.gridContainer {
+        height: calc(100% - 13px) !important;
+    }
+

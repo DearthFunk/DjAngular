@@ -1,0 +1,13 @@
+<div class="toolTipActivatorContainer animate-if"
+     data-ng-style="{borderColor: uiThemeService.theme.styles.global.toolTipToggle}"
+     data-ng-if="audioProcessingService.buffered"
+     data-ng-mouseenter="hovering = true"
+     data-ng-mouseleave="hovering = false"
+     data-ng-click="updateMessages()">
+    <span data-ng-style="{color:
+        uiService.userInterface.toolTips ?
+            uiThemeService.theme.styles.global.toolTipToggleActive :
+             hovering ?
+                uiThemeService.theme.styles.global.toolTipToggleHover :
+                uiThemeService.theme.styles.global.toolTipToggle}">?</span>
+</div>

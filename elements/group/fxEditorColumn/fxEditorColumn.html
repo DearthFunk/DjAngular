@@ -1,0 +1,24 @@
+<div class="fxEditorColumnContainer">
+
+    <div class="fxUnit" data-ng-repeat="selectedFX in channel.selectedFxs track by $index" data-ng-if="selectedFX.index > 0" data-ng-switch="selectedFX.index">
+
+        <div class="fxTopMenu">
+            <div class="radioButton" data-check-value="selectedFX.values.bypass" data-size="10"></div>
+            <div class="fxTitle">{{selectedFX.type}}</div>
+            <div class="actionIcons" data-icon-entries="fxIcons" data-font-size="16" data-entry="selectedFX" data-repeat-index="$index"></div>
+        </div>
+
+
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 1" data-values="selectedFX.values" class="fxCabinet"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 2" data-values="selectedFX.values" class="fxChorus"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 3" data-values="selectedFX.values" class="fxCompressor"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 4" data-values="selectedFX.values" class="fxConvolver" ></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 5" data-values="selectedFX.values" class="fxDelay"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 6" data-values="selectedFX.values" class="fxFilter"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 7" data-values="selectedFX.values" class="fxOverdrive"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 8" data-values="selectedFX.values" class="fxPhaser"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 9" data-values="selectedFX.values" class="fxTremolo"></div>
+        <div data-ng-if="selectedFX.visible && selectedFX.index == 10" data-values="selectedFX.values" class="fxWahwah"></div>
+
+    </div>
+</div>

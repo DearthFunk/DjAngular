@@ -1,0 +1,24 @@
+<div class="midiSelectContainer">
+    <div class="dropDown"
+         data-list="midiService.inputs"
+         data-selected="channelData.midiIn"
+         data-key="'deviceName'"
+         data-unique-function="selectMidiInDevice"
+         data-width="55"
+         data-height="20"></div>
+    <div class="dropDown"
+         data-list="midiService.outputs"
+         data-selected="channelData.midiOut"
+         data-key="'deviceName'"
+         data-unique-function="selectMidiOutDevice"
+         data-width="55"
+         data-height="20"></div>
+    <div class="dropDown"
+         data-ng-if="channelData.midiOut > 0 && keyActivations.length > 0"
+         data-list="keyActivations"
+         data-selected="key"
+         data-key="'name'"
+         data-unique-function="selectKey"
+         data-width="55"
+         data-height="20"></div>
+</div>

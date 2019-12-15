@@ -1,0 +1,17 @@
+div.fxSelectContainer {
+    margin-top: 10px;
+}
+div.mouseOverContainer {
+    height: 18px;
+}
+div.styled-select > select.fxDropDown {
+    cursor:pointer;
+}
+div.fxSelectDropDown {
+	width: 49px;
+}
+select.fxSelectDropDown {
+	width:49px;
+}
+
+

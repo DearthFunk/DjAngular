@@ -1,0 +1,47 @@
+<div class="dropDownContainer" data-ng-mouseleave="expanded = false">
+
+    <div class="mainBox"
+         data-ng-style="themeService.theme.styles.dropDownMain"
+         data-ng-click="toggleExpanded()">
+        <span>{{list == undefined ? ' ' : list[selected][key]}}</span>
+        <i class="fa fa-chevron-down"></i>
+    </div>
+
+    <div class="optionsContainer"
+         data-ng-show="expanded"
+         data-ng-style="themeService.theme.styles.dropDownList" >
+
+        <div class="bar down"
+             data-ng-show="list.length > maxListLength"
+             data-ng-mouseover="downStyle = true"
+             data-ng-mouseleave="downStyle = false"
+             data-ng-click="scroll(false)"
+             data-ng-style="downStyle ? themeService.theme.styles.dropDownListHover : ''">
+            Scroll Down (<b>{{offset}}</b>)</div>
+
+        <div class="option"
+             data-ng-mouseover="item.DDhovering = true"
+             data-ng-mouseleave="item.DDhovering = false"
+             data-ng-show="$index >= offset && $index < offset + maxListLength"
+             data-ng-style="
+                 item.notSelectable ?
+                    themeService.theme.styles.dropDownListDisabled :
+                    (selected == $index || item.DDhovering) ?
+                        themeService.theme.styles.dropDownListHover :
+                        item.DDhovering ?
+                            themeService.theme.styles.dropDownListHover :
+                            ''"
+             data-ng-repeat="item in list track by $index"
+             data-ng-mousedown="selectValue($index)">{{item[key]}}</div>
+
+        <div class="bar up"
+             data-ng-show="list.length > maxListLength"
+             data-ng-mouseover="upStyle = true"
+             data-ng-mouseleave="upStyle = false"
+             data-ng-click="scroll(true)"
+             data-ng-style="upStyle ? themeService.theme.styles.dropDownListHover : ''">
+            Scroll Up (<b>{{ list == undefined ? ' ' : list.length - (offset + maxListLength) }}</b>)</div>
+
+    </div>
+
+</div>

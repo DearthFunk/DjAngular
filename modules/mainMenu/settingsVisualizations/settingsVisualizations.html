@@ -1,0 +1,321 @@
+<div class="visualizationsContainer">
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Hex Map</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.hexMap.name)">Reset</span></div>
+
+        <input onchange="this.blur()" type="range" min="30" max="70" step="1" data-ng-model="visTheme.styles.hexMap.size"> Size<br>
+        <input onchange="this.blur()" type="range" min="0" max="30" step="1" data-ng-model="visTheme.styles.hexMap.minSize"> Min Size<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.hexMap.fill"> Color<br>
+        <input onchange="this.blur()" type="range" min="400" max="10000" step="1" data-ng-model="visTheme.styles.hexMap.fillOpacity"> Opacity<br>
+
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.hexMap.border"> Border<br>
+        <input onchange="this.blur()" type="range" min="0" max="1" step="0.1" data-ng-model="visTheme.styles.hexMap.borderOpacity"> Border Opacity<br>
+        <input onchange="this.blur()" type="range" min="0" max="5" step="1" data-ng-model="visTheme.styles.hexMap.borderWidth"> Border Width<br>
+
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.hexMap.textColor"> Text<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.hexMap.showText"> Show Text<br>
+
+        <input onchange="this.blur()" type="range" min="0.012" max="0.02" step="0.001" data-ng-model="visTheme.styles.hexMap.dbImpact"> db Impact<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="1" data-ng-model="visTheme.styles.hexMap.distance"> Distance<br>
+        <input onchange="this.blur()" type="range" min="100" max="2000" step="1" data-ng-model="visTheme.styles.hexMap.stretch"> Stretch<br>
+
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Sun And Clouds</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.sunAndClouds.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.sunAndClouds.sunColor"> Sun<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.sunAndClouds.cloudColor"> Cloud<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.sunAndClouds.scopeColor"> Scope<br>
+        <input onchange="this.blur()" type="range" min="0" max="140" step="1" data-ng-model="visTheme.styles.sunAndClouds.minSunSize"> Min Sun Size<br>
+        <input onchange="this.blur()" type="range" min="0.5" max="2" step="0.01" data-ng-model="visTheme.styles.sunAndClouds.cloudGrowth"> Cloud Growth<br>
+        <input onchange="this.blur()" type="range" min="0.01" max="4" step="0.01" data-ng-model="visTheme.styles.sunAndClouds.sunGrowth"> Sun Growth<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.sunAndClouds.showScope"> Show Scope<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.sunAndClouds.techniClouds"> Technicolor Clouds<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Whirly Particles</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.whirlyParticles.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.whirlyParticles.baseColor"> Base Color<br>
+        <input onchange="this.blur()" type="range" min="10" max="1000" step="1" data-ng-model="visTheme.styles.whirlyParticles.total"> Total<br>
+        <input onchange="this.blur()" type="range" min="3" max="70" step="1" data-ng-model="visTheme.styles.whirlyParticles.maxSize"> Size<br>
+        <input onchange="this.blur()" type="range" min="0.01" max="2" step="0.01" data-ng-model="visTheme.styles.whirlyParticles.dbIntensity"> db Intensity<br>
+        <input onchange="this.blur()" type="range" min="0.01" max="1" step="0.001" data-ng-model="visTheme.styles.whirlyParticles.speed"> db Intensity - Speed<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Squares</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.squares.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="0" max="50" step="1" data-ng-model="visTheme.styles.squares.padding"> Padding<br>
+        <input onchange="this.blur()" type="range" min="20" max="100" step="1" data-ng-model="visTheme.styles.squares.cellSize"> Cell Size<br>
+        <input onchange="this.blur()" type="range" min="0.001" max="5" step="0.001" data-ng-model="visTheme.styles.squares.growth"> Growth<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.squares.borderColor"> Border<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.squares.borderColorQuiet"> Border Quiet<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.squares.borderColorDb"> Border Loud<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.squares.fillColor"> Fill<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Spinner</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.spinner.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.spinner.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="0" max="500" step="1" data-ng-model="visTheme.styles.spinner.innerRadius"> Inner Radius<br>
+        <input onchange="this.blur()" type="range" min="1" max="40" step="1" data-ng-model="visTheme.styles.spinner.totalCircles"> Total Circles<br>
+        <input onchange="this.blur()" type="range" min="4" max="40" step="1" data-ng-model="visTheme.styles.spinner.linesPerLayer"> Lines Per Circle<br>
+        <input onchange="this.blur()" type="range" min="10" max="300" step="1" data-ng-model="visTheme.styles.spinner.circleSize"> Circle Size<br>
+        <input onchange="this.blur()" type="range" min="0" max="30" step="1" data-ng-model="visTheme.styles.spinner.circlePadding"> Circle Padding<br>
+        <input onchange="this.blur()" type="range" min="0" max="0.2" step="0.001" data-ng-model="visTheme.styles.spinner.speed"> Speed<br>
+        <input onchange="this.blur()" type="range" min="100" max="9000" step="1" data-ng-model="visTheme.styles.spinner.dbSpeedImpact"> dB Speed Impact<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="1" data-ng-model="visTheme.styles.spinner.lineThickness"> Line Thickness<br>
+        <input onchange="this.blur()" type="range" min="0" max="10" step="1" data-ng-model="visTheme.styles.spinner.dbStretch"> dB Stretch<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Particles</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.particles.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="0" max="500" step="1" data-ng-model="visTheme.styles.particles.innerRadius"> Inner Radius<br>
+        <input onchange="this.blur()" type="range" min="100" max="500" step="1" data-ng-model="visTheme.styles.particles.outerRadius"> Outer Radius<br>
+        <input onchange="this.blur()" type="range" min="1" max="100" step="1" data-ng-model="visTheme.styles.particles.dbIntensity"> dB Intensity<br>
+        <input onchange="this.blur()" type="range" min="10" max="500" step="1" data-ng-model="visTheme.styles.particles.total"> Total<br>
+        <input onchange="this.blur()" type="range" min="0.02" max="0.5" step="0.001" data-ng-model="visTheme.styles.particles.speed"> Speed<br>
+        <input onchange="this.blur()" type="range" min="1" max="30" step="0.001" data-ng-model="visTheme.styles.particles.maxSize"> Max Size<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.particles.tracerLines"> Tracer Lines<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Spiral Galaxy</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.bars.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.spiralGalaxy.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="600" step="1" data-ng-model="visTheme.styles.spiralGalaxy.total"> Total<br>
+        <input onchange="this.blur()" type="range" min="1" max="30" step="1" data-ng-model="visTheme.styles.spiralGalaxy.maxSize"> Max Size<br>
+        <input onchange="this.blur()" type="range" min="0.01" max="0.5" step="0.01" data-ng-model="visTheme.styles.spiralGalaxy.speed"> Speed<br>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.spiralGalaxy.dbIntensity"> dB Intensity<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Bars</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.bars.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bars.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="5" max="20" step="1" data-ng-model="visTheme.styles.bars.width"> Width<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bars.borderColor"> Border Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="8" step="1" data-ng-model="visTheme.styles.bars.borderWidth"> Border Width<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">BarCode</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.barcode.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.barcode.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="10" max="30" step="1" data-ng-model="visTheme.styles.barcode.spacing"> Spacing<br>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.barcode.thickness"> Thickness<br>
+        <input onchange="this.blur()" type="range" min="2" max="10" step="1" data-ng-model="visTheme.styles.barcode.total"> Total<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Fountain</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.barcode.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.fountain.minColor"> Min Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.fountain.maxColor"> Max Color<br>
+        <input onchange="this.blur()" type="range" min="0" max="0.5" step="0.01" data-ng-model="visTheme.styles.fountain.padding"> Padding<br>
+        <input onchange="this.blur()" type="range" min="10" max="30" step="1" data-ng-model="visTheme.styles.fountain.maxSize"> Max Size<br>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.fountain.xForce"> X-Force<br>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.fountain.yForce"> Y-Force<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="4" step="0.1" data-ng-model="visTheme.styles.fountain.reduction"> Reduction <br>
+        <input onchange="this.blur()" type="range" min="20" max="500" step="1" data-ng-model="visTheme.styles.fountain.total"> Total<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.fountain.reverse"> Top Or Bottom<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Bumps</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.bumps.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bumps.topLeft"> Top Left<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bumps.topRight"> Top Right<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bumps.bottomLeft"> Bottom Left<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.bumps.bottomRight"> Bottom Right<br>
+        <input onchange="this.blur()" type="range" min="2" max="25" step="1" data-ng-model="visTheme.styles.bumps.total"> Total<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.bumps.mirror"> Mirror<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Circles</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.circles.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="1" max="5" step="0.1" data-ng-model="visTheme.styles.circles.speedSolid"> Speed: Solid<br>
+        <input onchange="this.blur()" type="range" min="1" max="5" step="0.1" data-ng-model="visTheme.styles.circles.speedHighlight"> Speed: Highlight<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="0.1" data-ng-model="visTheme.styles.circles.reduction"> Reduction <br>
+        <input onchange="this.blur()" type="range" min="0" max="300" step="1" data-ng-model="visTheme.styles.circles.padding"> Padding<br>
+        <input onchange="this.blur()" type="range" min="0" max="10"  step="1" data-ng-model="visTheme.styles.circles.squeeze"> Squeeze The Tip!<br>
+        <input onchange="this.blur()" type="range" min="0" max="300" step="1" data-ng-model="visTheme.styles.circles.solid.maxSize"> Max Size: Solid<br>
+        <input onchange="this.blur()" type="range" min="0" max="300" step="1" data-ng-model="visTheme.styles.circles.highlight.maxSize"> Max Size: Highlight<br>
+        <input onchange="this.blur()" type="range" min="0" max="500" step="1" data-ng-model="visTheme.styles.circles.solid.total"> Total: Solid<br>
+        <input onchange="this.blur()" type="range" min="0" max="40" step="1" data-ng-model="visTheme.styles.circles.highlight.total"> Total: Highlight<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circles.color.min"> Color Min<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circles.color.max"> Color Max<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Circles x4</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.circlesX4.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="1" max="5" step="0.1" data-ng-model="visTheme.styles.circlesX4.speed"> Speed<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="2" step="0.1" data-ng-model="visTheme.styles.circlesX4.reduction"> Reduction <br>
+        <input onchange="this.blur()" type="range" min="0" max="0.5" step="0.01" data-ng-model="visTheme.styles.circlesX4.padding"> Padding<br>
+        <input onchange="this.blur()" type="range" min="0" max="10"  step="1" data-ng-model="visTheme.styles.circlesX4.squeeze"> Squeeze The Tip!<br>
+        <input onchange="this.blur()" type="range" min="10" max="30" step="1" data-ng-model="visTheme.styles.circlesX4.maxSize"> Max Size<br>
+        <input onchange="this.blur()" type="range" min="4" max="500" step="1" data-ng-model="visTheme.styles.circlesX4.total"> Total<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="1" step="0.1" data-ng-model="visTheme.styles.circlesX4.opacity"> Opacity<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circlesX4.colorMin"> Color Min<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circlesX4.colorMax"> Color Max<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.circlesX4.side[0]"> Up<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.circlesX4.side[1]"> Down<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.circlesX4.side[2]"> Left<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.circlesX4.side[3]"> Right<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Circle Mountains</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.circleMountains.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circleMountains.color"> Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circleMountains.tipColor"> Tip: Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="12" step="1" data-ng-model="visTheme.styles.circleMountains.tipThickness"> Tip Thickness<br>
+        <input onchange="this.blur()" type="range" min="10" max="80" step="1" data-ng-model="visTheme.styles.circleMountains.columns"> Columns<br>
+        <input onchange="this.blur()" type="range" min="0" max="100" step="1" data-ng-model="visTheme.styles.circleMountains.paddingBottom"> Padding: Bottom<br>
+        <input onchange="this.blur()" type="range" min="0" max="100" step="1" data-ng-model="visTheme.styles.circleMountains.paddingSides"> Padding: Sides<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="0.8" step="0.01" data-ng-model="visTheme.styles.circleMountains.radiusGrowth"> Radius Growth<br>
+        <input onchange="this.blur()" type="range" min="10" max="100" step="1" data-ng-model="visTheme.styles.circleMountains.verticalSpacing"> Vertical Spacing<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Circle Threads</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.circleThreads.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circleThreads.color"> Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.circleThreads.highlightColor"> Highlight Color<br>
+        <input onchange="this.blur()" type="range" min="2" max="20" step="1" data-ng-model="visTheme.styles.circleThreads.highlightConsistency"> Highlight Consistency<br>
+        <input onchange="this.blur()" type="range" min="1" max="30" step="1" data-ng-model="visTheme.styles.circleThreads.columns"> Columns<br>
+        <input onchange="this.blur()" type="range" min="1" max="30" step="1" data-ng-model="visTheme.styles.circleThreads.totalPerColumn"> Total<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="1" data-ng-model="visTheme.styles.circleThreads.decaySpeed"> Decay Speed<br>
+        <input onchange="this.blur()" type="range" min="0" max="500" step="1" data-ng-model="visTheme.styles.circleThreads.paddingSides"> Side Padding<br>
+        <input onchange="this.blur()" type="range" min="2" max="15" step="0.1" data-ng-model="visTheme.styles.circleThreads.radiusSpeed"> Max Speed<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.circleThreads.reverse"> Reverse<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Downward Spiral</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.downwardSpiral.name)">Reset</span></div>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.downwardSpiral.stereoSplit"> Stereo Split<br>
+        <input onchange="this.blur()" type="range" min="4" max="100" step="1" data-ng-model="visTheme.styles.downwardSpiral.numRect"> Total<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.downwardSpiral.color"> Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.downwardSpiral.borderColor"> Border Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.downwardSpiral.borderWidth"> Border Width<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Flower</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.flower.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="4" max="20" step="1" data-ng-model="visTheme.styles.flower.leavesTotal"> Leaves: Total<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.leavesColor"> Leaves: Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.leavesBorder"> Leaves: Border<br>
+        <input onchange="this.blur()" type="range" min="0" max="100" step="1" data-ng-model="visTheme.styles.flower.leavesOpacity"> Leaves: Opacity<br>
+        <input onchange="this.blur()" type="range" min="0" max="400" step="1" data-ng-model="visTheme.styles.flower.totalCircleDecay"> Circles: Total<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.circleColor"> Circles: Color<br>
+        <input onchange="this.blur()" type="range" min="10" max="200" step="1" data-ng-model="visTheme.styles.flower.budRadius"> Bud: Radius<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.budColor"> Bud: Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.budBorder"> Bud: Border<br>
+        <input onchange="this.blur()" type="range" min="5" max="1" step="1" data-ng-model="visTheme.styles.flower.budBumpsRadius"> Bud Bumps: Radius<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.budBumpsColor"> Bud Bumps: Color<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.budBumpsBorder"> Bud Bumps: Border<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.flower.stemShow"> Stem: Show<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.stemColor"> Stem: Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="30" step="1" data-ng-model="visTheme.styles.flower.stemSize"> Stem: Size<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.flower.showLines"> Lines: Show<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.lineColor"> Lines: Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="1" data-ng-model="visTheme.styles.flower.lineSize"> Lines: Thickness<br>
+        <input onchange="this.blur()" type="range" min="2" max="12" step="1" data-ng-model="visTheme.styles.flower.lineLength"> Lines: Length<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.flower.showScope"> Scope: Show<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.flower.scopeColor"> Scope: Color<br>
+    </div>
+
+
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Grid</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.grid.name)">Reset</span></div>
+        <input onchange="this.blur()" type="range" min="1" max="20" step="1" data-ng-model="visTheme.styles.grid.spacing"> Spacing<br>
+        <input onchange="this.blur()" type="range" min="20" max="60" step="1" data-ng-model="visTheme.styles.grid.cellSize"> Cell Size<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.grid.colorTop"> Color: Top<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.grid.colorBot"> Color: Bottom<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.grid.dbOpacity"> dB Opacity<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="1" step="0.1" data-ng-model="visTheme.styles.grid.dBOffBaseOpacity"> Opacity (dB off)<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Math Machine</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.mathMachine.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.mathMachine.squareColor"> Square Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="26" step="1" data-ng-model="visTheme.styles.mathMachine.total"> Squares Total<br>
+        <input onchange="this.blur()" type="range" min="1" max="100" step="1" data-ng-model="visTheme.styles.mathMachine.levels"> Square Depth<br>
+        <input onchange="this.blur()" type="range" min="0" max="600" step="1" data-ng-model="visTheme.styles.mathMachine.radius"> Square Size<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.mathMachine.pointLines"> Point Lines<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.mathMachine.dbOpacity"> Square dB Opacity<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Mountains</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.mountains.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.mountains.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="150" step="1" data-ng-model="visTheme.styles.mountains.thickness"> Thickness<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Rectangle Blur</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.rectangleBlur.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.rectangleBlur.barColor"> Bars<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.rectangleBlur.barBorder"> Bar Border<br>
+        <input onchange="this.blur()" type="range" min="10" max="50  0" step="1" data-ng-model="visTheme.styles.rectangleBlur.cellSize"> Bar Cell Size<br>
+        <input onchange="this.blur()" type="range" min="1" max="50" step="1" data-ng-model="visTheme.styles.rectangleBlur.columns"> Columns<br>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.rectangleBlur.circleColor"> Circles: Color <br>
+        <input onchange="this.blur()" type="range" min="0" max="1000" step="1" data-ng-model="visTheme.styles.rectangleBlur.totalCircles"> Circles: Total<br>
+        <input onchange="this.blur()" type="range" min="0" max="300" step="1" data-ng-model="visTheme.styles.rectangleBlur.circleMaxSize"> Circles: Max Size<br>
+        <input onchange="this.blur()" type="range" min="1" max="10" step="1" data-ng-model="visTheme.styles.rectangleBlur.circleReduction"> Circles: Reduction<br>
+        <input onchange="this.blur()" type="range" min="0" max="20  0" step="1" data-ng-model="visTheme.styles.rectangleBlur.paddingSides"> Padding: Sides<br>
+
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Scope</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.scope.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.scope.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="1" max="150" step="1" data-ng-model="visTheme.styles.scope.thickness"> Thickness<br>
+    </div>
+
+    <div class="section">
+        <div class="sectionHeader" data-ng-style="{borderColor: themeService.theme.styles.menu.borderColor}">
+            <span class="sectionTitle">Tunnel</span>
+            <span class="resetLink" data-ng-click="resetSection(visTheme.styles.tunnel.name)">Reset</span></div>
+        <input onchange="this.blur()" type="color" data-ng-model="visTheme.styles.tunnel.color"> Color<br>
+        <input onchange="this.blur()" type="range" min="0.1" max="2" step="0.1" data-ng-model="visTheme.styles.tunnel.speed"> Speed<br>
+        <input onchange="this.blur()" type="checkbox" data-ng-model="visTheme.styles.tunnel.dbOpacity"> dB Opacity<br>
+    </div>
+
+</div>

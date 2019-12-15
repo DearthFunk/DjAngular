@@ -1,0 +1,149 @@
+div.mainMenuContainer {
+    z-index: 999999;
+    margin-top: 4px;
+    height: 700px;
+    position: fixed;
+}
+    div.mainMenuContainer > div.panel {
+        height: 100%;
+        border: 1px solid;
+        padding: 14px;
+        font-size: 16px;
+        border-left: none;
+        vertical-align: top;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        display: inline-block;
+        margin-left: -3px;
+        position: relative;
+
+    }
+        div.mainMenuContainer > div.panel.panel0 {
+            width: 315px;
+            border-right: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+            div.mainMenuContainer > div.panel.panel0 > div.inner {
+                position: relative;
+            }
+
+        div.mainMenuContainer > div.panel.panel1 {
+            width: 260px;
+        }
+            div.mainMenuContainer > div.panel.panel1 > div.inner {
+                text-align: right;
+                border-bottom: 1px solid;
+                padding: 12px 0;
+            }
+                div.mainMenuContainer > div.panel.panel1 > div.inner > div.inputLabel {
+                    display: inline-block;
+                    padding-right: 2px;
+                    top: -6px;
+                    position: relative;
+                }
+
+        div.mainMenuContainer > div.panel.panel2 {
+            font-size: 22px;
+            height: 102px;
+            width: 26px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+
+
+/* ------ SETTINGS ANIMATION ------ */
+/* -------------------------------- */
+.settingsAnimation {
+    position: absolute;
+    width: 100%;
+}
+.settingsAnimation.ng-enter, .settingsAnimation.ng-leave {
+    -webkit-transition:0.5s ease-in-out all;
+    opacity: 1;
+}
+.settingsAnimation.ng-enter {
+    opacity: 0;
+}
+.settingsAnimation.ng-leave, .settingsAnimation.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+.settingsAnimation.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+
+/* ------ SETTINGS ELEMENTS ------- */
+/* -------------------------------- */
+div.mainMenuContainer input[type="color"] {
+    width: 34px;
+    height: 20px;
+    padding: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+}
+
+div.mainMenuContainer input[type="text"] {
+    border: 1px solid;
+    height: 20px;
+    width: 143px;
+    padding-left: 3px;
+    margin: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 5px;
+    text-shadow: none;
+}
+
+div.mainMenuContainer input[type="range"] {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    width: 30px;
+    height: 4px;
+
+}
+div.mainMenuContainer input[type="checkbox"] {
+    cursor: pointer;
+}
+div.mainMenuContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #FFFFFF;
+    width: 4px;
+    height: 10px;
+}
+
+
+div.mainMenuContainer div.topButton {
+    display: inline-block;
+    width: 103px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+div.mainMenuContainer div.section {
+    margin-bottom: 30px;
+}
+div.mainMenuContainer div.subSection {
+    margin-left: 20px;
+}
+div.mainMenuContainer div.subSectionHeader {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+div.mainMenuContainer div.sectionHeader {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+}
+
+div.mainMenuContainer div.settingsLink:hover { background-color: rgba(100,100,100,0.3); }
+div.mainMenuContainer div.settingsLink {
+    cursor: pointer;
+    text-align: right;
+    padding-right: 5px;
+}

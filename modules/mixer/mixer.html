@@ -1,0 +1,38 @@
+<div class="mixerContainer">
+
+	<div class="top" data-ng-style="themeService.theme.styles.mixerBorder">
+
+        <div class="mixerChannelContainer" data-ng-style="themeService.theme.styles.mixerBorder">
+            <div data-ng-repeat="item in audioChannelService.trackChannels track by $index"
+                 data-ng-if="item.active"
+                 data-ng-style="themeService.theme.styles.mixerTrackBorder"
+                 class="mixerChannel"
+                 data-channel-data="item">
+                <div class="fxSelect" data-channel-data="item" data-ng-if="item.enableFX"></div>
+                <div class="midiSelect" data-channel-data="item" data-channel-number="$index" data-ng-if="item.enableMIDI && midiService.loaded"></div>
+            </div>
+        </div>
+
+        <div class="mixerChannelContainer" data-ng-style="themeService.theme.styles.mixerBorder">
+            <div class="mixerChannel" data-ng-style="themeService.theme.styles.mixerTrackBorder" data-channel-data="audioChannelService.masterChannel">
+            </div>
+        </div>
+	</div>
+
+    <div class="clear"></div>
+
+	<div class="bottom" data-ng-style="themeService.theme.styles.mixerText">
+        <div class="tempoTracker"></div>
+
+        <div class="row">
+            <div class="control numberModifier" data-label="'Bars'" data-min-value="1"  data-max-value="8"  data-num-value="audioProcessingService.playValues.bars"></div>
+            <div class="control numberModifier" data-label="'Beats'"  data-min-value="1"  data-max-value="16"  data-num-value="audioProcessingService.playValues.beats"></div>
+            <div class="control numberModifier" data-label="'BPM'"  data-min-value="40" data-max-value="240" data-num-value="audioProcessingService.playValues.bpm"></div>
+        </div>
+        <div class="row">
+            <div class="radioButton" data-check-value="audioProcessingService.audibleClickTrack" data-size="10" data-width="60" data-label="'Click'"></div>
+            <div class="sliderHorizontal" data-slider-value="audioProcessingService.clickGain" data-width="60"></div>
+        </div>
+	</div>
+
+</div>

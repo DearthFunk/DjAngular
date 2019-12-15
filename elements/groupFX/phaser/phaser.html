@@ -1,0 +1,14 @@
+<div class="phaserContainer">
+    <div class="knobRow" data-ng-if="showBypass">
+        <div class="radioButton" data-check-value="values.bypass" data-size="10" data-width="75" data-label="'Bypass'"></div>
+    </div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Rate'"   data-knob-size="30" data-min-value="0.01" data-max-value="8" data-knob-value="values.rate"></div>
+        <div class="knob" data-label="'Depth'"   data-knob-size="30" data-min-value="0" data-max-value="1" data-knob-value="values.depth"></div>
+    </div>
+    <div class="knobRow">
+        <div class="knob" data-label="'Fdbk'"   data-knob-size="40" data-min-value="0" data-max-value="1" data-knob-value="values.feedback"></div>
+        <div class="knob" data-label="'Phase'"   data-knob-size="40" data-min-value="0" data-max-value="180" data-knob-value="values.stereoPhase"></div>
+        <div class="knob" data-label="'Mod'"   data-knob-size="40" data-min-value="500" data-max-value="1500" data-knob-value="values.baseModulationFrequency"></div>
+    </div>
+</div>
